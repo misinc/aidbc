@@ -1,0 +1,15 @@
+{
+  "menu-bcas-apps": {
+    "weight": 600000,
+    "icon": "/_System/Apps/thr-ga-manager/_config/icon.png",
+    "title": "Apps"
+  },
+  "menu-bcas-thr-ga-manager": {
+    "parent": "menu-bcas-apps",
+    "weight": 20,
+    "title": "Google Analytics Manager",
+    "attr": {
+      "href": "/Admin/AppLoader.aspx?client_id=thr-ga-manager"
+    }
+  }
+}

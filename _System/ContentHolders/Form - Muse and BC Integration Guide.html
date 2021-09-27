@@ -1,0 +1,64 @@
+<form method="post" onsubmit="return checkWholeForm69454(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=123570&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&PageID=http://www.aidbc.com/thanks-for-your-downloading-our-guide" role="form" id="catwebformform69454">
+    <div class="form-group">
+        <input type="text" name="FullName" id="FullName" class="form-control" placeholder="Full Name">
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="EmailAddress" id="EmailAddress" class="form-control" placeholder="Email Address">
+    </div>
+
+    <div style="display: none;">
+        <input type="hidden" name="CAT_Custom_464656" id="CAT_Custom_464656" value="{module_pageaddress}"> 
+        <input type="checkbox" name="CampaignList_43655" checked="checked">
+    </div>
+    <br>
+    <button class="btn btn-primary" data-target="#myModal" data-toggle="modal" type="button"><i class="glyphicon glyphicon-download-alt" aria-hidden="true"></i> Free Download</button>
+
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+
+                    <h4 class="modal-title">Free Download</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        {module_recaptcha version="2"}
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Close</button> <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-download-alt" aria-hidden="true"></i> Free Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script> 
+    <script type="text/javascript">
+
+    //<![CDATA[
+    var submitcount69454 = 0;
+
+    function checkWholeForm69454(theForm) {
+        var why = "";
+        if (theForm.FullName) why += isEmpty(theForm.FullName.value, "Full Name");
+        if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+        if (theForm['g-recaptcha-response']) why += reCaptchaV2IsInvalid(theForm, "Please prove you're not a robot");
+        if (why != "") {
+            alert(why);
+            return false;
+        }
+        if (submitcount69454 == 0) {
+            submitcount69454++;
+            theForm.submit();
+            return false;
+        } else {
+            alert("Form submission is in progress.");
+            return false;
+        }
+    }
+    //]]>
+    </script>
+</form>

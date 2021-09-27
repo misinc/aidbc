@@ -1,0 +1,29 @@
+External ID,Item Name,Item Description,Release Date,Expiry Date,Weight,Template ID,Enabled,EntityId,Classifications,Address,N/A,City,State,Zipcode,Country of domain purchase is made from,Photo,Venue,Dates,Booking ID,Phone,Event Price,Caption,ProductID
+4030762,Business Catalyst Training class in San Francisco,"<html>
+    <head>
+        <title>Business Catalyst Training in San Francisco</title>
+        <meta name=""Description"" content=""AID BC provides Business Catalyst Training classes in San Francisco at the Adobe Systems offices."" />
+        <style>
+            .pkt_added {text-decoration:none !important;}
+        </style>
+    </head>
+    <body>
+        <h3>February 26-27, 2013</h3>
+        <p>The two day Business Catalyst course will help you grow your online business. Each day also includes time for one-on-one consulting so we can discuss your specific BC site and goals. We love to answer your questions, so make sure you come prepared.</p>
+        <p>We will provide you with:</p>
+        <div class=""row-fluid"">
+        <div class=""span6"">
+        <ul>
+            <li>Continental Breakfast</li>
+            <li>Catered Lunch</li>
+            <li>Laptop to use during classes</li>
+            <li>Demo website</li>
+        </ul>
+        </div>
+        </div>
+        <p>Join us in San Francisco at the Adobe offices and let our experts help you get the most out of your online business.</p>
+        <p>To learn more about our BC training courses, please visit our <a href=""/business-catalyst-training"">BC training</a> pages.</p>
+        <p><strong>$495 per day.</strong></p>
+    </body>
+</html>
+",22-Jan-2013,01-Jan-9999,,0,N, -1,,601 Townsend Street,,San Francisco,CA,94103,US,/images/locations/adobe-offices-san-francisco-ca.jpg,Adobe Systems Incorporated,"February 26-27, 2013",5045,415.832.2000,990,Photo by Ed Schipul,5418868

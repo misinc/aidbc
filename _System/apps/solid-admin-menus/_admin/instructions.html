@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/_System/Apps/solid-admin-menus/_admin/content/jQueryUI/1.10.3/smoothness/css-jquery-ui-1.10.3.custom.min.css">	
+    <link rel="stylesheet" href="/_System/Apps/solid-admin-menus/_admin/content/bcam.css">
+	<link rel="stylesheet" href="/_System/Apps/solid-admin-menus/_admin/content/app-1.1.0.min.css">
+	    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>    
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+	<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+	<script src="/_System/Apps/solid-admin-menus/_admin/scripts/ratatapps-1.1.0.min.js"></script>
+	<script src="/_System/Apps/solid-admin-menus/_admin/scripts/instructions-0.0.1.min.js"></script>
+	
+</head>
+<body>	
+	<ul class="bcam-tabs">
+		<li>
+		<a id="tab-labels" href="/_System/Apps/solid-admin-menus/_admin/app.html">Change Labels</a>
+		</li>
+		<li class="active">
+		<a id="tab-instructions" href="/_System/Apps/solid-admin-menus/_admin/instructions.html">Instructions</a>
+		</li>
+	</ul>
+	<div id = "instructions-container">
+    <h4>Version: 1.1.3</h4>
+   		<h4>Description</h4>
+The admin menu app allows an admin user to change the contents of the admin menus. This app allows you to perform the following features:
+<ul>
+  <li>Change admin menu labels.</li>
+  <li>Add links to external resources.</li>
+  <li>Embed external apps and websites into the admin</li>
+  <li>Reorder and regroup menu items via drag and drop interface.</li>
+  <li>Hide default menu items.</li>
+  <li>Change menu item icons by choosing a different icon from the library or uploading your own.</li>
+</ul>
+<h4>Recommendations</h4>
+<ul>
+  <li>If adding a link that displays within the admin console it is recommended to use the https protocol for your links. This will maximize compatibility of your link. Http links will only work if a user logs into the admin console using http but will not work if logged in using https. Https links will work in both cases.</li>
+  <li>Custom icons need to be PNG files ideally at 20px x 20px with a transparent background. If an image with different dimensions are uploaded the image will be cropped to 20px x 20 px.</li>
+  <li>Keep menu labels under 20 characters otherwise the label will be cut off and after the 19th character there will be three dots (...).</li>
+</ul>
+<h4>Basic Usage</h4>
+<ul>
+  <li>Click on any left menu item's icon to change the icon.  You may choose an existing icon or upload a new 20px x 20px PNG file. (You must save your changes before this will take effect.)</li>
+  <li>You may reorder admin menu items by clicking and dragging any admin menu item to a new location within their current scope.  Top menu items, left menu items and sub menu items can be individually reordered but not moved to another menu item category. </li>
+</ul>
+<div class = "nav-item-toggle-target">
+  <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-new-window"></span> </button>
+  - Signifies the URL will open in a new window (Click to toggle to open in admin area). </div>
+<div class = "nav-item-toggle-target">
+  <button type="button" class="btn btn-default btn-sm greyback"> <span class="glyphicon glyphicon-unchecked"></span> </button>
+  - Signifies the URL will open in the admin area of the website (Click to toggle to open in a new window). </div>
+<div class = "nav-item-toggle-hide">
+  <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-eye-open"></span> </button>
+  - Signifies the admin menu item will be visible (Click to hide admin menu item). </div>
+<div class = "nav-item-toggle-hide">
+  <button type="button" class="btn btn-default btn-sm greyback"> <span class="glyphicon glyphicon-eye-close"></span> </button>
+  - Signifies the admin menu item will be hidden (Click to show admin menu item). </div>
+<div class = "nav-item-access-rights">
+  <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-user"></span> </button>
+  - Click to add admin menu item level access rights. </div>
+<div class = "nav-item-access-rights">
+  <button type="button" class="btn btn-default btn-sm yellowback"> <span class="glyphicon glyphicon-user"></span> </button>
+  - Signifies limited access rights (customizations have been made by user). </div>
+<div class = "nav-item-toggle-remove">
+  <button type="button" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-minus-sign"></span> </button>
+  - Click to remove the admin menu item </div>
+<div class = "nav-item-toggle-subnav">
+  <button type="button" class="btn btn-default btn-sm greyback"> <span class="glyphicon glyphicon-circle-arrow-right"></span> Sub Menu </button>
+  - Click to expand the sub menu items for this admin menu item. </div>
+<div class = "nav-item-toggle-subnav">
+  <button type="button" class="btn btn-default btn-sm greyback"> <span class="glyphicon glyphicon-circle-arrow-down"></span> Sub Menu </button>
+  - Click to collapse the sub menu items for this admin menu item. </div>
+<div class="instruction-item">
+  <button type="submit" class="btn">Add To List</button>
+  - Click to add a new admin menu item to the list of menu items. (You must save your changes before this will take effect.) </div>
+<div class="save-actions">
+  <button type="submit" class="btn btn-primary save">Save Changes</button>
+  - Click to save all changes made in this application. </div>
+<div class="save-actions">
+  <button type="submit" class="btn btn-warning restore-default">Restore Default Settings</button>
+  - Click to restore all admin menu settings prior to using this application. </div>
+<div>
+  <select name="select" class="moveToParent">
+    <option value="0">Move</option>
+  </select>
+  - Regroup items: Moves a child menu item into another parent menu (group). </div>
+<h4>General Notes</h4>
+<ul>
+  <li>Default menu items cannot be removed, although they can be hidden.</li>
+  <li>You can always access the app by going to the URL directly: http://YOURDOMAIN/Admin/AppLoader.aspx?client_id=solid-admin-menus</li>
+  <li>Custom icons need to be PNG Files.</li>
+  <li>You cannot delete default icons from the library.</li>
+  <li>The list under access rights displays the available roles on the website.</li>
+  <li>At least one role needs to have access to the app at all times.</li>
+  <li>Disabling a role from the app removes the "Admin Menu Labels" from the menu. Technically the user can still access the app if they enter the link directly into their browser (limitation in BC API prevent us from completely disabling them).</li>
+  <li>You cannot change the name of this app</li>
+  <li>Top menu items in Business Catalyst do not have icons.</li>
+  <li>You cannot modify the links in the top right.</li>
+  <li>If the user has "Home Page" set as the landing page under "My Details" (this is the default setting), when the user logs in they will be taken to the Dashboard and NOT the first parent item in the menu.</li>
+  <li>To change the roles available under access rights, you must update the roles under Site Settings > User Roles (these are the default labels).</li>
+  <li>You cannot reorder or change the default menu items in the top nav (ribbon).</li>
+  <li>Fields in red indicate that the field cannot be changed. In most cases this is due to legal requirements set by Adobe</li>
+  <li>This app does not allow you to change the name of web apps. To change the name of the web app, access the settings page for the web app.</li>
+  <li>You cannot place links to the site domain (a front end page of the same website the app is installed on) or an app domain.
+    <ul>
+      <li>New restriction from Adobe as of 04/09/2014 update</li>
+    </ul>
+  </li>
+  <li>External links must be delivered securely, over the https protocol.
+    <ul>
+      <li>New restirction from Adobe as of 05/12/2014</li>
+    </ul>
+  </li>
+  </ul>
+<h4>Updates in Version 1.1.3    </h4>
+<ul>
+<li>
+  Fixed menu.json error caused by special characters used in web app names</li>
+  <li>
+Fixed menu.json error found on websites on website hosting plans lower than ecommerce
+</li>
+</ul>
+<h4>Limitations in Version 1.1.3</h4>
+<ul>
+  <li>App does not control other installed apps.</li>
+  <li>Cannot set access rights for built in menu items or custom menu items.</li>
+  <li>This app does not currently distinguish between different BC hosting plans.  There is a known issue where the E-Commerce menu item shows up for those plans that do not support this feature.</li>
+  <li>Custom menu items can be moved to the left (meaning that it becomes a parent menu item). Built in menu items cannot be setup as a parent menu item and must remain as a child items but can be placed into other parent menus (groups).</li>
+  </ul>
+<p><strong>BC Updates between Version 1.1.2-1.1.3</strong></p>
+<ul>
+  <li>All external links embeded inside the admin console need to be delivered over the https protocol due to a Business Catalyst update that enforces apps to run over a secure domain using https.</li>
+</ul>
+<h4>Updates in Version 1.1.2</h4>
+<ul>
+  <li>Removal of Access Rights for Custom Menu Items</li>
+  <li>Bug Fixes to be compatible with BC update on 04/09/2104:
+    <ul>
+      <li>Fixed incorrect weight logic issue that was causing menu not to render</li>
+      <li>Fixed incompatible custom menu property issue that was causing menu not to render</li>
+    </ul>
+  </li>
+  <li>Added Versioning
+    <ul>
+      <li>New way to keep track of version of the app installed so the app can apply automatic fixes when upgrading from older version if neccessary
+        <ul>
+          <li>Includes an automated fix of the menu.json file for sites upgrading from version 1.1 to version 1.1.2.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h4>BC Updates between Version 1.1-1.1.2</h4>
+<ul>
+  <li>Placing a menu item before the Dashboard no longer overrides the Dashboard as the start page when a user logs in</li>
+  <li>BC fixed issue where the menu settings were not sticking when going through the web app creation steps</li>
+  <li>BC fixed issue where the &ldquo;Gear&rdquo; icon for Web Apps that are moved to a new parent does not go to the &ldquo;Edit Web App&rdquo; screen</li>
+  <li>BC placed a new limitation where users cannot place a link to the site domain (the same URL the app is installed on) inside the admin console</li>
+</ul>
+<h4>Updates in Version 1.1</h4>
+<ul>
+  <li>Regroup Menu Items</li>
+  <li>Reorder and Regroup Web Apps</li>
+  <li>Access Rights for Custom Menu Items</li>
+  <li>Support for International Languages (special characters now allowed)</li>
+  <li>Control Placement of Admin Menu Labels Menu Item</li>
+  <li>Protected items cannot be renamed or regroup per new Adobe requirement</li>
+</ul>
+<h4>Troubleshooting</h4>
+<p><strong>Q:</strong> When I save my changes why do I not see the updates reflected in the admin menus? <strong><br>
+  A:</strong> If you are logged into the admin console using http you will need to refresh the browser before changes will appear.</p>
+<p><strong>Q:</strong> Why isn't my link loading when trying to load in the admin console? <strong><br>
+  A:</strong> Some companies prevent their website from being framed into another website. To see if this is the cause to your problem, open up the development console in your browser and see if a javascript error was triggered when trying to load the page. The error will say something along the lines of 'X-Frame-options' to 'SAMREORIGIN'.</p>
+<p><strong>Q:</strong> I don't like my changes, how do I put the menus back to how it was? <strong><br>
+  A:</strong> Click the Restore Default Settings button under the "Change Labels" tab.</p>
+<p><strong>Q:</strong> I can't find the &quot;Admin Menu Labels&quot; app anywhere in the menu<strong><br>
+  A:</strong> This can be caused by either the hiding of the menu link to the app using the app or there is an error in menu.json file created by the app. You can always access the app by going to it directly: http://YOURDOMAIN/Admin/AppLoader.aspx?client_id=solid-admin-menus. If there is an error in the file, going to the app URL directly should fix the menu.json file. If you are still seeing errors in Business Catalyst and your menus are not appearing, please contact support.</p>
+<h4>Remove Admin Menu Labels</h4>
+<p><strong>WARNING: </strong>Removing this application will delete all files related to this application from your server and revert any changes made to your menu labels through this application.</p>
+<button id = "delete-app" class="btn btn-danger">Delete App</button>
+	</div>
+</body>
+</html>

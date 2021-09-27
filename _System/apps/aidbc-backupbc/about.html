@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backup BC Information</title>
+		<meta meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="styles/styles.css" rel="stylesheet">
+		<link href="styles/custom.pack.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	</head>
+	<body id="information" class="hybrid">
+		<div id="overlay"></div>
+		<div id="loadingIndicator"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>
+		<div id="container-body">
+			<ul id="hybridSubmenu">
+				<li><a href="index.html">Backups</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="instructions.html">Instructions</a></li>
+			</ul>
+			<h2 class="hybridFormHeader clearfix"><span class="hybridFormTitlewrap"><br>About Website Backups</span></h2>
+			<p><strong id="version-info"></strong></p>
+			<p>Our mission is to provide the simplest possible backup solution for your website.</p>
+			<p>Your website platform allows us to backup most -- but not all -- of your website. Please look in the Instructions tab for details on exactly what gets backed up and what doesn't.</p>
+			<p>&nbsp;</p>
+			<div id="appDeleted" class="hide"><br>The BackupBC app has been deleted from your site.<br></div>
+			<div class="footerbuttons">
+				<h2 class="hybridFormHeader"><span class="hybridFormTitlewrap">Uninstall</span></h2>
+				<p>You can uninstall (delete) this app. Once deleted you will have no access to it from the admin. Any backups you’ve stored on your website will still be available through your file manager or ftp.</p>
+				<input type="button" id="deleteApp" class="btn btn-danger" value="Delete App">
+			</div>
+		</div>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+		<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.3/dropbox.js"></script>
+		<script type="text/javascript" src="scripts/base.pack.js?v=1.5"></script>
+	</body>
+</html>

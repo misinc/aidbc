@@ -1,0 +1,185 @@
+<!--
+* 
+* Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+* Permission is hereby granted, free of charge, to any person obtaining a
+* copy of this software and associated documentation files (the "Software"), 
+* to deal in the Software without restriction, including without limitation 
+* the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+* and/or sell copies of the Software, and to permit persons to whom the 
+* Software is furnished to do so, subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+* DEALINGS IN THE SOFTWARE.
+* 
+*
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!-- required for getting the auth cookie -->
+        <script src="//cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
+
+        <!-- jquery UI needed for draggable / sortable behavior -->
+        <link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" rel="StyleSheet" />
+        <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
+        <!-- notification engine -->
+        <script src="assets/system-notifications/system-notifications.js"></script>
+        <link href="assets/system-notifications/system-notifications.css" type="text/css" rel="StyleSheet" />
+        
+        <!-- BC API SDK -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+
+        <!-- Latest Bootstrap compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <script src="assets/aidbc-notifications.js"></script>
+        <link href="assets/aidbc-notifications.css" type="text/css" rel="StyleSheet" />
+        <script src="assets/collapse.js"></script>
+        
+        <title>BC Notifications</title>
+    </head>
+    <body>
+        <ul class="nav nav-tabs nav-tabs-menu" data-sid="navigation-menu">
+	  		<li class="active"><a href="#tab-settings" data-toggle="tab">Settings</a></li>
+	  		<li><a href="#tab-instructions" data-toggle="tab">Instructions</a></li>
+		</ul>
+        
+        <div class="tab-content">		
+			<div class="tab-pane active" id="tab-settings">
+		        <div class="inlinehelp">
+		            <span class="close-btn">x</span>
+		            <div class="helpcontent">
+		                <h2>Welcome to BC Notifications</h2>
+						This app allows you to easily setup Notifications when purchases or inquiries are made on your website. The notifications will appear as push notifications on your mobile device (iPhone and Android). If you use Safari, you will also be able to receive notifications in your browser. This app requires Boxcar, which is a free app and service available on the App Store and Google Play.
+		            </div>
+		        </div>
+		        
+		        <div class="app-content container">
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#settings">
+          Settings
+        </a>
+      </h4>
+    </div>
+    <div id="settings" class="panel-collapse collapse in">
+      <div class="panel-body">
+					<form class="form-horizontal">
+					<fieldset>
+					
+					<!-- Form Name -->
+					<legend>Notification Settings</legend>
+					
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="token">Access Token</label>
+					  <div class="col-sm-6">
+					    <input id="boxcar-token" name="boxcar-token" type="text" placeholder="Boxcar Token" class="form-control" value="">
+					    <p class="help-block">Enter your Boxcar access token. You can <a href="https://new.boxcar.io/account/edit" target="_blank">find your access token here</a>.</p>
+					  </div>
+					</div>
+					
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="domain">Domain Name</label>
+					  <div class="col-sm-6">
+					    <input id="domain" name="domain" type="text" placeholder="Your Domain Name" class="form-control" value="{module_secureurl}">
+					    <p class="help-block">Enter your Domain Name</p>
+					  </div>
+					</div>
+					
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="title">Title</label>
+					  <div class="col-sm-6">
+					    <input id="title" name="title" type="text" placeholder="Enter the title of the notifications" class="form-control">
+					    <p class="help-block">Enter the Title of the notifications</p>
+					  </div>
+					</div>
+					
+					<!-- Textarea -->
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="message">Message</label>
+					  <div class="col-sm-6">                     
+					    <textarea id="message" name="message" class="form-control" rows="3">Enter the message you would like to receive when you are notified.</textarea>
+					  </div>
+					</div>
+					
+					<!-- Button (Double) -->
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="button1id"></label>
+					  <div class="col-sm-6">
+					    <button id="button1id" name="button1id" class="btn btn-success">Save</button>
+					    <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+					  </div>
+					</div>
+					
+					</fieldset>
+					</form>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#notification_url">
+          Notification URLs
+        </a>
+      </h4>
+    </div>
+    <div id="notification_url" class="panel-collapse collapse">
+      <div class="panel-body">
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="title">Order Notification URL</label>
+					  <div class="col-sm-6">
+					    <input id="order-notification-url" name="order-notification-url" type="text" class="form-control" value="http://notifications.aidbc.com/boxcar/bc_boxcar.php?token=e85BKu0uLTPGiUJOUIqD&domain={module_secureurl}&title=aidbc.com+purchase&message=Someone+just+purchased+something+on+aidbc/">
+					    <p class="help-block">Copy and Paste this into...</p>
+					  </div>
+					</div>
+      </div>
+      <div class="panel-body">
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="title">Quote Notification URL</label>
+					  <div class="col-sm-6">
+					    <input id="quote-notification-url" name="quote-notification-url" type="text" class="form-control">
+					    <p class="help-block">Copy and Paste this into...</p>
+					  </div>
+					</div>
+      </div>
+      <div class="panel-body">
+					<div class="form-group">
+					  <label class="col-sm-2 control-label control-label" for="title">Inquiry Notification URL</label>
+					  <div class="col-sm-6">
+					    <input id="inquiry-notification-url" name="inquiry-notification-url" type="text" class="form-control">
+					    <p class="help-block">Copy and Paste this into...</p>
+					  </div>
+					</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+		        </div>
+		    </div>
+		    
+		    <div class="tab-pane instructions-content" id="tab-instructions"></div>
+		 </div>
+    </body>
+</html>

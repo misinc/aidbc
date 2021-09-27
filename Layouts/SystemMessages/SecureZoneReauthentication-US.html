@@ -1,0 +1,26 @@
+<div class="system-error-message">
+	<h1>Confirm Credentials</h1>
+	<p>
+		Before we continue, we need to verify your identity. Please fill in your account credentials.
+	</p>
+	<hr />
+	<form name="catseczoneform{tag_rand}" onsubmit="return checkWholeForm{tag_rand}(this)" action="https://{tag_siteSecureUrl}/MemberProcess.aspx?ZoneID=-1&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;A=Reauth" method="post">
+		<div class="form">
+			<div class="item">
+				<label>Username</label><br/><input class="textbox" maxlength="255" name="CurrentUsername" value="{module_username}" disabled/>
+			</div>
+			<div class="item">
+				<label>Password</label><br/><input class="textbox" type="password" maxlength="255" value="" name="CurrentPassword" autocomplete="off"/>
+			</div>
+			<div class="item">
+				<input class="button" type="submit" value="Login" />&nbsp;
+			</div>
+			<br>
+			<div class="item">
+                {tag_parameters}
+			</div>
+		</div>
+		<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+		<script type="text/javascript">function checkWholeForm{tag_rand}(theForm){var why = "";if (theForm.Username) why += isEmpty(theForm.Username.value, "Username");if (theForm.Password) why += isEmpty(theForm.Password.value, "Password");if (why != ""){alert(why);return false;}theForm.submit();return false;}</script>
+	</form>
+</div>

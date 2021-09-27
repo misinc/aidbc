@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backup BC Setup Wizard</title>
+		{% include "/_System/Apps/backups-unlimited/includes/head.inc" %}
+	</head>
+	<body id="wizard" class="hybrid">
+		{% include "/_System/Apps/backups-unlimited/includes/loading.inc" %}
+		<div id="terms">
+			<div id="terms-body">
+				<div class="pull-right"><input id="agreeButton" type="button" class="basic-button large-button call-to-action" value="Agree"></div>
+			</div>
+		</div>
+		<div id="container-body">
+			<h2 class="hybridFormHeader"><span class="hybridFormTitlewrap full">Setup Your Backups</span></h2>
+			<p class="intro">You can always go back and change your preferences later.</p>
+			<ul id="hybridSubmenu">
+				<li id="step-1" class="wizard-step active"><a href="#storage-location">1. Storage Location</a></li>
+				<li id="step-2" class="wizard-step"><a href="#backup-when">2. Schedule Your Backups</a></li>
+				<li id="step-3" class="wizard-step"><a href="#backup-what">3. Choose What to Back Up</a></li>
+			</ul>
+            <div id="storage-location" class="box-item full">
+				{% include "/_System/Apps/backups-unlimited/includes/uploadTo.inc" %}
+			</div>
+			<div id="storage-limits" class="box-item full hide">
+				{% include "/_System/Apps/backups-unlimited/includes/limits.inc" %}
+			</div>
+			<div id="backup-when" class="box-item full hide">
+				{% include "/_System/Apps/backups-unlimited/includes/frequency.inc" %}
+			</div>
+			<div id="backup-what" class="box-item full hide">
+				{% include "/_System/Apps/backups-unlimited/includes/backupWhat.inc" %}
+			</div>
+			<div class="footerbuttons">
+				<input id="previousStep" type="button" class="basic-button large-button hide" value="Back">
+				<input id="nextStep" type="button" class="basic-button large-button call-to-action" value="Next">
+				<input id="finishStep" type="button" class="basic-button large-button call-to-action hide" value="Finish">
+			</div>
+		</div>
+		{% include "/_System/Apps/backups-unlimited/includes/scripts.inc" %}
+	</body>
+</html>

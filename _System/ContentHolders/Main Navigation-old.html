@@ -1,0 +1,47 @@
+<div id="myMenu1">
+						<ul>
+							<li><a href="http://www.aidbc.com">Home</a></li>
+							<li><a href="http://www.aidbc.com/business-catalyst-training">BC Training</a></li>
+							<li><a href="http://www.aidbc.com/locations">Locations</a></li>
+							<li><a href="http://www.aidbc.com/business-catalyst-news">BC News</a></li>
+							<li class="dropdown"> <a href="http://www.aidbc.com/bc-partners" class="dropdown-toggle" data-toggle="dropdown">BC Partners <b class="caret"></b></a> 
+							<ul class="dropdown-menu">
+								<li><a href="/affiliates/business-catalyst-partner-affiliate-program">Affiliate Program</a></li>
+							</ul>
+							</li>
+							<li><a href="/about">About</a></li>
+							<li><a href="http://www.aidbc.com/contact">Contact</a></li>
+						</ul>
+					</div>
+
+<!-- the following script is needed to set the selected state -->
+<script type="text/javascript" src="/CatalystScripts/Java_DynMenusSelectedCSS.js"></script>
+<script type="text/javascript" >
+	// ids need to be unique per page, use different ones if you are including multiple menus in the same page
+	// id of the nav tag, used above
+	var divTagId = "myMenu1";
+
+	// desired id for 1st <ul> tag 
+	var ulTagId = "menu-main-navigation";
+
+	// desired class for 1st <ul> tag 
+	var ulTagClass = "nav";
+
+	// desired class for 2nd <ul> tag 
+	var ulTagClass1 = "dropdown-menu";
+
+	if ((null !== ulTagId) && ("" !== ulTagId)) {
+		document.getElementById(divTagId).getElementsByTagName("ul")[0].setAttribute("id",ulTagId);
+	}
+	if ((null !== ulTagClass) && ("" !== ulTagClass)) {
+		document.getElementById(divTagId).getElementsByTagName("ul")[0].className = ulTagClass;
+	}
+	if ((null !== ulTagClass1) && ("" !== ulTagClass1)) {
+		document.getElementById(divTagId).getElementsByTagName("ul")[1].className = ulTagClass1;
+	}
+	
+	// this will set the selected state
+	if ((null !== ulTagId) && ("" !== ulTagId)) {
+		catSetSelectedCSSItem(ulTagId);
+	}
+</script>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backup BC Instructions</title>
+		<meta meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="styles/styles.css" rel="stylesheet">
+		<link href="styles/custom.pack.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	</head>
+	<body id="instructions" class="hybrid">
+		<div id="overlay"></div>
+		<div id="loadingIndicator"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>
+		<div id="container-body">
+			<ul id="hybridSubmenu">
+				<li><a href="index.html">Backups</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li class="active"> <a href="instructions.html">Instructions</a></li>
+			</ul>
+			<div id="info-link"><a href="about.html"><i class="fa fa-info-circle"></i></a></div>
+			<h2 class="hybridFormHeader"><span class="hybridFormTitlewrap">Instructions</span></h2>
+			<div class="accordion" id="accordion2">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">How to Backup</a>
+					</div>
+					<div id="collapseOne" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<iframe width="560" height="315" src="//www.youtube.com/embed/9VnhbkPTB4c" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">How to Restore</a>
+					</div>
+					<div id="collapseTwo" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<iframe width="560" height="315" src="//www.youtube.com/embed/8wen5joAW0Y" frameborder="0" allowfullscreen></iframe>
+							<p>As described in the video, there are different ways to restore your data. One method is to use an FTP client to restore data to your website. There are a number of SFTP clients you can use to connect to your site. Regardless of the client you use, the you’ll need to use the following SFTP (which means Secure File Transfer Protocol) connection details for your site are as below:</p>
+							<ul>
+								<li>Host name - mydomain.com</li>
+								<li>Protocol - SFTP / SSH File Transfer Protocol</li>
+								<li>Port - 22</li>
+								<li>User name - mydomain.com/email@mydomain.com</li>
+								<li>Password - Your admin login password</li>
+							</ul>
+							<p><img src="/_System/apps/aidbc-backupbc/images/sftp.PNG" width="576" height="94" alt="SFTP settings"></p>
+							<p>For more information on FTP, see this knowledgebase article from Adobe <a href="http://helpx.adobe.com/business-catalyst/partner/connecting-site-using-ftp-client.html">http://helpx.adobe.com/business-catalyst/partner/connecting-site-using-ftp-client.html</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">What Gets Backed Up</a>
+					</div>
+					<div id="collapseThree" class="accordion-body collapse">
+						<div class="accordion-inner"> 
+							<p>Following is a list of items that can currently be backed up with BackupBC. More items will be added soon.</p>
+							<div class="span12 faq-li">
+								<div class="span6">
+									<p><strong>Files</strong> </p>
+									<ul>
+										<li>Folders</li>
+										<li>System Files</li>
+										<li>Images</li>
+										<li>Code, such as Javascript, jQuery, and CSS</li>
+										<li>Layouts</li>
+										<li>Outbound Emails</li>
+										<li>Shipping Details</li>
+										<li>System Messages</li>
+										<li>Module Templates</li>
+										<li>Page Templates</li>
+										<li>System Apps (such as those in the app store)</li>
+										<li>Campaigns (Draft and Sent)</li>
+										<li>Content Holders</li>
+										<li>Sitemap XML File</li>
+									</ul>
+								</div>
+								<div class="span3">
+									<p><strong>Web Apps</strong> </p>
+									<ul>
+										<li>Web App Items</li>
+										<li>Web App Layouts</li>
+										<li>Web App Autoresponder Emails</li>
+									</ul>
+								</div>
+								<div class="span3">
+									<p><strong>CRM</strong> </p>
+									<ul>
+										<li>Customers<sup>*</sup> </li>
+										<li>Cases<sup>*</sup> </li>
+										<li>Orders<sup>*</sup> </li>
+									</ul>
+								</div>
+								<div class="span3">
+									<p><strong>Ecommerce</strong> </p>
+									<ul>
+										<li>Catalogs</li>
+										<li>Products</li>
+										<li>Ecommerce Layouts</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clearfix"><i><small><sup>*</sup>Only the standard CRM fields are backed up. Extended CRM data is not backed up at this time. Exercise discretion when restoring CRM data if you have extended your CRM. Also note, cases and orders are only exported in json format, which at this point are not importable from the admin console. <a href="helpdesk.bcappstore.com/support/tickets/new">Contact us</a> about custom import support for cases and orders. </small></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">Troubleshooting</a>
+					</div>
+					<div id="collapseFour" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<div class="accordion-link" id="accordion3">
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourTwo">I get a script error.</a>
+									</div>
+									<div id="collapseFourTwo" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>Occasionally, on sites with a lot of files or exceptionally large files you may see a script error. Your browser has predefined timers that monitor scripts, and when a script takes longer to complete than the given timer allows, it decides that it must be unresponsive and gives the error you’re seeing. Firefox, Chrome, Safari, Opera and IE all have this set differently and use differing messages, too. </p>
+											<p>These script error messages usually give you the option to cancel (kill, terminate, etc.) or continue. You should continue, even if you see this message multiple times. This will allow the scripts to keep running.</p>
+											<p>If after multiple attempts you still encounter this problem, please submit a support ticket.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourThree">My backup says "incomplete" or "some items not backed up".</a>
+									</div>
+									<div id="collapseFourThree" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>If you see this message, then one or more of your files or folders was named with illegal characters. When naming items in your site, do not use spaces or other characters such as: ! # $ % & ' @ ^ ` ~ + , ; = ) ( . &nbsp; &nbsp; To see exactly what was skipped during your backup, refer to the README.txt document that appears in your backup file.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourFour">The items I restored have (Inactive) next to them.</a>
+									</div>
+									<div id="collapseFourFour" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>If your restored items are inactive, they do not appear on the front end of your website and seem to be missing. This occurs because of the item’s detail settings, specifically the release date and the expiration date. If the release date is set to some future date or if the expiration date is in the past, the item will be inactive.</p>
+											<p><strong>Note:</strong>  <br>This problem only occurs if you have opened CSV file(s) from your backup using Microsoft Excel and saved the file(s) before importing into Business Catalyst to restore data.</p>
+											<p><strong>Reason:</strong> <br>In Excel, the column where you enter an expiration date of 1/1/9999 (to avoid an item from expiring), is automatically truncated and re-formatted to 01-Jan-99. When you import the web app items into the system, the data is reset to the year 1999.</p>
+											<p><strong>Solution:</strong> <br>Highlight the expiration column in Excel and set its type to text. Type in 01-Jan-9999, copy the cell, paste the date into the other cells and re-import it. Now, all of the Web App items will not expire until 01-Jan-3000. This resolves the missing items issue. This setting ensures that you’ll have no inactive items upon adding or updating data with Excel.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourFive">My backup is slow.</a>
+									</div>
+									<div id="collapseFourFive" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>In the current version of Adobe’s Open Platform, all file processing must occur within the browser. This means the size of your site and your computer’s processor speed will impact the speed of your backups, and your Internet connection speed will limit how quickly your backup is uploaded to your website. Here a few tips to follow if you are experiencing slow backups:</p>
+											<ul>
+												<li>Close all the other tabs in your browser so your backup is running in the only open tab. If you need to browse the web during your backup, try using another browser if you have access to one. For example, if you’re running your backup in Firefox, then you can continue browsing using Safari.</li>
+												<li>Close all open applications if you’re not using them. This will free up resources that will help your backup run faster.</li>
+												<li>One good technique is to run your backups at night when you’re not using your computer. Be sure and set your computer to not go to sleep so that your backup can continue when you are not present. You do not need to be present for your backup to run through to completion. When your backup is complete, you will see a message indicating its completion. </li>
+												<li>Instead of backing up your entire site, try backing up your site using the ’from’ and ’to’ dates. For example, backup the first year of data from your website, then make backups of each year until your current year. Then, backup your site from the date of your last backup. This will speed up your backups and require less storage space.</li>
+												<li>Try doing separate backups for each of the items. For example, backup just your files. Then backup CRM, and so on.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourSix">My backup restarts.</a>
+									</div>
+									<div id="collapseFourSix" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>In the current version of Adobe’s Open Platform, all file processing must occur within the browser. This means the size of your site and your computer’s processor speed will impact the speed of your backups. If a process is not completed within given parameters, BackupBC will attempt the process again by restarting it. In many cases, the process can finish, but sometimes it will restart again.</p>
+											<p>If your backup seems to restart for several cycles, log out of the admin console, then log back in and begin a new backup. </p>
+											<p>Also be sure to see "My backup is slow" in this troubleshooting panel for tips on speeding up your backups, which can help reduce process restarts.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourSeven">My backup size exceeds the upload size limit.</a>
+									</div>
+									<div id="collapseFourSeven" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>Business Catalyst has a 250MB limit for uploads. If your backup exceeds that limit your backup cannot be uploaded. Instead, you will be presented with an option to download your backup to your local drive.</p>
+											<p><strong>Please note: </strong>you will not see the download option if you are using Safari. This is due to limitations with that particular browser. If you use another browser (Firefox, Chrome, IE) you will be able to download your backup.</p>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-group nested">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourEight">I cannot use BackupBC due to an unauthorized access message.</a>
+									</div>
+									<div id="collapseFourEight" class="accordion-body collapse">
+										<div class="accordion-inner nested">
+											<p>The exact unauthorized message may vary between browsers, but the result is the same: you are unable to access BackupBC. To solve this, you must change your preferences to not block cookies from third parties.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">Support</a>
+					</div>
+					<div id="collapseFive" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<p><strong>Installation Support</strong><br>If you need support regarding your installation, please submit a support ticket using the BC App Store support system <a href="http://helpdesk.bcappstore.com/support/tickets/new">http://helpdesk.bcappstore.com/support/tickets/new</a></p>
+							<p><strong>Backup Support</strong><br>If you need support with BackupBC other than installation issues, please submit a support ticket using the BackupBC support system <a href="http://support.backupbc.com/support/tickets/new">http://support.backupbc.com/support/tickets/new</a></p>
+							<p>Once you've contacted the BackupBC support team, you may be asked to generate a log file to help us diagnose the problem. Just check the box found on the bottom right of your backups screen, and then run your backup. The log file is generated when BackupBC encounters problems, and you can save the log file to send to the support team.</p>
+							<p><img src="/_System/apps/aidbc-backupbc/images/BBC-log-file.png" width="500" height="251" alt="Generate log file"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script> 
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script> 
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script> 
+	<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+	<script type="text/javascript" src="scripts/base.pack.js?v=1.15"></script> 
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,63 @@
+<h3>Newsletter signup</h3>
+<p>Signup for our newsletter and receive our latest news and tutorials.</p>
+<form name="catwebformform69454" method="post" onsubmit="return checkWholeForm69454(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=62672&amp;OID=7231293&amp;OTYPE=1&amp;EID=0&amp;CID=0&amp;OPTIN=True&amp;SAR=False&amp;PageID=http://www.aidbc.com/thanks-for-your-subscription" class="form-inline" role="form">
+    <div class="form-group">
+    <input type="text" name="FullName" id="FullName" class="form-control" placeholder="Full Name" />
+    </div>
+    <div class="form-group">
+    <input type="text" name="EmailAddress" id="EmailAddress" class="form-control" placeholder="Email Address" />
+    </div>
+    <div style="display: none;">
+    <input type="hidden" name="CAT_Custom_308883" id="CAT_Custom_308883" value="{module_pageaddress}" />
+    <input type="checkbox" name="CampaignList_43655" checked="checked" />
+    Subscribe to: Web Form Signup
+    </div>
+    <br />
+    <button class="btn btn-default" data-target="#myModal" data-toggle="modal" type="button">Next</button>
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+    <h4 class="modal-title">Newsletter signup</h4>
+    </div>
+    <div class="modal-body">
+    <div class="form-group">
+    <label>Enter Word Verification in box below</label>
+    {module_captchav2}
+    </div>
+    </div>
+    <div class="modal-footer">
+    <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript">
+
+		//<![CDATA[
+		var submitcount69454 = 0;
+		
+		function checkWholeForm69454(theForm) {
+		    var why = "";
+		    if (theForm.FullName) why += isEmpty(theForm.FullName.value, "Full Name");
+		    if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+		    if (theForm.CaptchaV2) why += captchaIsInvalid(theForm, "Enter Word Verification in box below", "Please enter the correct Word Verification as seen in the image");
+			if (why != "") {
+		        alert(why);
+		        return false;
+		    }
+		    if (submitcount69454 == 0) {
+		        submitcount69454++;
+		        theForm.submit();
+		        return false;
+		    } else {
+		        alert("Form submission is in progress.");
+		        return false;
+		    }
+		}
+		//]]>
+	</script>
+</form>

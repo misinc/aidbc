@@ -1,0 +1,77 @@
+	<div class="page-header marketing">
+	  <h1>Business Catalyst News <small>from around the web.</small></h1>
+	</div>
+
+      <!-- Main Page Content and Sidebar -->
+ 
+  <div class="row marketing">
+ 
+    <!-- Main Blog Content -->
+    <div class="col-md-8" role="content">
+ 
+      <article>
+ 
+        <h3>{tag_name}</h3>
+        <h6>Written by AID+BC on {tag_releasedate} | {tag_classifications}</h6>
+ 
+        <div class="row">
+          <div class="col-md-6">
+	          {tag_description}
+	          <p>{tag_source}</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{tag_photo_value}" class="img-responsive" alt="" />
+          </div>
+        </div>
+        <br/>
+        <!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style" addthis:url="{tag_itemurl_withhost}" addthis:title="{tag_name}">
+		<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		<a class="addthis_button_tweet"></a>
+		<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>	
+		<a class="addthis_counter addthis_pill_style"></a>
+		</div>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5119202807eb0975"></script>
+		<!-- AddThis Button END -->
+      </article>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'aidbc'; // required: 
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+         <a href="/business-catalyst-news">&larr; Back</a>
+    </div>
+ 
+    <!-- End Main Content -->
+ 
+ 
+    <!-- Sidebar -->
+ 
+    <aside class="col-md-4">
+        {module_contentholder,name="Aside - AIDBC Magazine"}
+			<hr />
+			{module_contentholder,name="Aside - Get Started"}
+        <hr />
+        {module_contentholder,name="Aside - Newsletter Signup"}
+        <hr />
+        {module_contentholder,name="Aside - BC News"}
+    </aside>
+ 
+    <!-- End Sidebar -->
+  </div>
+ 
+  <!-- End Main Content and Sidebar -->
+ 
+ 

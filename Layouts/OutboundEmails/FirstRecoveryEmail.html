@@ -1,0 +1,41 @@
+
+	<html>
+	<head>
+	  <style type="text/css">
+		body {
+		  font: 15px sans-serif;
+		  margin: 3em;
+		}
+		#items-list {
+		  margin: 3em .5em;
+		}
+		.productitemcell,
+		img {
+		  height: 3em;
+		  line-height: 3em;
+		  padding-bottom: 3em;
+		}
+		#names {
+		  padding-right: .5em;
+		  font-weight: bold;
+		}
+	  </style>
+	</head>
+
+	<body>
+	  Hello {tag_recipientname},<br> 
+	  You forgot about these items:
+
+	  <table id="items-list">
+		<td id="images">{tag_productimage}</td>
+		<td id="names">{tag_productname}</td>
+		<td id="prices">{tag_productextaxamount}</td>
+	  </table>
+
+	  <strong>Total:</strong> {tag_invoicetotal}
+       
+       <br><br>
+      <a href="{tag_continueshopping_link}"> Continue your shopping </a>
+	</body>
+	</html>
+	

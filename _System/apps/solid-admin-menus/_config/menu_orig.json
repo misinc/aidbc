@@ -1,0 +1,376 @@
+{
+	"menu-custom-labels": {
+		"title": "Admin Menu Labels",
+		"parent": "menu-site-settings",
+		"attr": {
+			"href": "/Admin/AppLoader.aspx?client_id=solid-admin-menus"
+		},
+		"weight": 200000
+	},
+	"menu-dashboard": {
+		"title": "Dashboard",
+		"weight": 10000
+	},
+	"menu-site-manager": {
+		"title": "Site Manager",
+		"weight": 20000
+	},
+	"menu-webapps": {
+		"title": "Web Apps",
+		"weight": 30000
+	},
+	"menu-modules": {
+		"title": "Modules",
+		"weight": 40000
+	},
+	"menu-customers": {
+		"title": "CRM",
+		"weight": 50000
+	},
+	"menu-ecommerce": {
+		"title": "Ecommerce",
+		"weight": 60000
+	},
+	"menu-email-marketing": {
+		"title": "Email Marketing",
+		"weight": 70000
+	},
+	"menu-reports": {
+		"title": "Reports",
+		"weight": 80000
+	},
+	"menu-site-settings": {
+		"title": "Site Settings",
+		"weight": 90000
+	},
+	"menu-blogs": {
+		"title": "Blogs",
+		"parent": "menu-modules",
+		"weight": 10000
+	},
+	"menu-events": {
+		"title": "Events",
+		"parent": "menu-modules",
+		"weight": 20000
+	},
+	"menu-galleries": {
+		"title": "Photo Galleries",
+		"parent": "menu-modules",
+		"weight": 30000
+	},
+	"menu-news": {
+		"title": "News",
+		"parent": "menu-modules",
+		"weight": 40000
+	},
+	"menu-downloads": {
+		"title": "Media Downloads",
+		"parent": "menu-modules",
+		"weight": 50000
+	},
+	"menu-comments": {
+		"title": "Comments",
+		"parent": "menu-modules",
+		"weight": 60000
+	},
+	"menu-faq": {
+		"title": "FAQs",
+		"parent": "menu-modules",
+		"weight": 70000
+	},
+	"menu-banners": {
+		"title": "Ad Rotators",
+		"parent": "menu-modules",
+		"weight": 80000
+	},
+	"menu-forums": {
+		"title": "Forums",
+		"parent": "menu-modules",
+		"weight": 90000
+	},
+	"menu-webpages": {
+		"title": "Pages",
+		"parent": "menu-site-manager",
+		"weight": 10000
+	},
+	"menu-site-templates": {
+		"title": "Page Templates",
+		"parent": "menu-site-manager",
+		"weight": 20000
+	},
+	"menu-module-templates": {
+		"title": "Module Templates",
+		"parent": "menu-site-manager",
+		"weight": 30000
+	},
+	"menu-content-holders": {
+		"title": "Content Holders",
+		"parent": "menu-site-manager",
+		"weight": 40000
+	},
+	"menu-dynamic-menus": {
+		"title": "Menus",
+		"parent": "menu-site-manager",
+		"weight": 50000
+	},
+	"menu-webforms": {
+		"title": "Web Forms",
+		"parent": "menu-site-manager",
+		"weight": 60000
+	},
+	"menu-file-manager": {
+		"title": "File Manager",
+		"parent": "menu-site-manager",
+		"weight": 70000
+	},
+	"menu-secure-pages": {
+		"title": "Secure Zones",
+		"parent": "menu-site-manager",
+		"weight": 80000
+	},
+	"menu-url-redirects": {
+		"title": "URL Redirects",
+		"parent": "menu-site-manager",
+		"weight": 90000
+	},
+	"menu-site-search": {
+		"title": "Site Search",
+		"parent": "menu-site-manager",
+		"weight": 100000
+	},
+	"menu-system-messages": {
+		"title": "System Pages",
+		"parent": "menu-site-manager",
+		"weight": 110000
+	},
+	"menu-system-emails": {
+		"title": "System E-mails",
+		"parent": "menu-site-manager",
+		"weight": 120000
+	},
+	"menu-customers-search": {
+		"title": "Search",
+		"parent": "menu-customers",
+		"weight": 30000
+	},
+	"menu-customers-manage": {
+		"title": "Customers",
+		"parent": "menu-customers",
+		"weight": 40000
+	},
+	"menu-orders": {
+		"title": "Orders",
+		"parent": "menu-customers",
+		"weight": 50000
+	},
+	"menu-cases": {
+		"title": "Cases",
+		"parent": "menu-customers",
+		"weight": 60000
+	},
+	"menu-bookings": {
+		"title": "Event Bookings",
+		"parent": "menu-customers",
+		"weight": 70000
+	},
+	"menu-opportunities": {
+		"title": "Opportunities",
+		"parent": "menu-customers",
+		"weight": 80000
+	},
+	"menu-forecasts": {
+		"title": "Sales Forecasts",
+		"parent": "menu-customers",
+		"weight": 90000
+	},
+	"menu-customers-database": {
+		"title": "Extend CRM Database",
+		"parent": "menu-customers",
+		"weight": 100000
+	},
+	"menu-products": {
+		"title": "Products",
+		"parent": "menu-ecommerce",
+		"weight": 10000
+	},
+	"menu-catalogs": {
+		"title": "Catalogs",
+		"parent": "menu-ecommerce",
+		"weight": 20000
+	},
+	"menu-discount-codes": {
+		"title": "Discount Codes",
+		"parent": "menu-ecommerce",
+		"weight": 30000
+	},
+	"menu-giftvouchers": {
+		"title": "Gift Vouchers",
+		"parent": "menu-ecommerce",
+		"weight": 40000
+	},
+	"menu-affiliate-programs": {
+		"title": "Affiliate Programs",
+		"parent": "menu-ecommerce",
+		"weight": 50000
+	},
+	"menu-payment-gateways": {
+		"title": "Payment Gateways",
+		"parent": "menu-ecommerce",
+		"weight": 60000
+	},
+	"menu-taxcodes": {
+		"title": "Tax Codes",
+		"parent": "menu-ecommerce",
+		"weight": 70000
+	},
+	"menu-shipping-options": {
+		"title": "Shipping Options",
+		"parent": "menu-ecommerce",
+		"weight": 80000
+	},
+	"menu-settings-shop": {
+		"title": "Shop Settings",
+		"parent": "menu-ecommerce",
+		"weight": 90000
+	},
+	"menu-email-campaigns": {
+		"title": "E-Mail Campaigns",
+		"parent": "menu-email-marketing",
+		"weight": 10000
+	},
+	"menu-mailing-lists": {
+		"title": "Mailing Lists",
+		"parent": "menu-email-marketing",
+		"weight": 20000
+	},
+	"menu-reports-visitors": {
+		"title": "Visitors",
+		"parent": "menu-reports",
+		"weight": 10000
+	},
+	"menu-reports-traffic": {
+		"title": "Traffic Sources",
+		"parent": "menu-reports",
+		"weight": 20000
+	},
+	"menu-reports-content": {
+		"title": "Website Content",
+		"parent": "menu-reports",
+		"weight": 30000
+	},
+	"menu-reports-webforms": {
+		"title": "Web Forms Usage",
+		"parent": "menu-reports",
+		"weight": 40000
+	},
+	"menu-reports-ecommerce": {
+		"title": "E-Commerce",
+		"parent": "menu-reports",
+		"weight": 50000
+	},
+	"menu-reports-email-campaigns": {
+		"title": "E-Mail Campaigns",
+		"parent": "menu-reports",
+		"weight": 60000
+	},
+	"menu-reports-custom": {
+		"title": "Custom Reports",
+		"parent": "menu-reports",
+		"weight": 70000
+	},
+	"menu-reports-admin-usage": {
+		"title": "Admin Reports",
+		"parent": "menu-reports",
+		"weight": 90000
+	},
+	"menu-settings-domains": {
+		"title": "Site Domains",
+		"parent": "menu-site-settings",
+		"weight": 10000
+	},
+	"menu-settings-emailaccounts": {
+		"title": "E-Mail Accounts",
+		"parent": "menu-site-settings",
+		"weight": 20000
+	},
+	"menu-settings-adminusers": {
+		"title": "Admin Users",
+		"parent": "menu-site-settings",
+		"weight": 30000
+	},
+	"menu-settings-userroles": {
+		"title": "User Roles",
+		"parent": "menu-site-settings",
+		"weight": 40000
+	},
+	"menu-settings-categories": {
+		"title": "Categories",
+		"parent": "menu-site-settings",
+		"weight": 50000
+	},
+	"menu-settings-workflows": {
+		"title": "Manage Workflows",
+		"parent": "menu-site-settings",
+		"weight": 60000
+	},
+	"menu-settings-facebook": {
+		"title": "Social Integration",
+		"parent": "menu-site-settings",
+		"weight": 70000
+	},
+	"menu-settings-mobilesupport": {
+		"title": "Mobile Support",
+		"parent": "menu-site-settings",
+		"weight": 80000
+	},
+	"menu-settings-captcha": {
+		"title": "Captcha",
+		"parent": "menu-site-settings",
+		"weight": 90000
+	},
+	"menu-settings-site-map": {
+		"title": "Site Map",
+		"parent": "menu-site-settings",
+		"weight": 100000
+	},
+	"menu-settings-rss-channels": {
+		"title": "RSS Channels",
+		"parent": "menu-site-settings",
+		"weight": 110000
+	},
+	"menu-billing-settings": {
+		"title": "Site Billing",
+		"parent": "menu-site-settings",
+		"weight": 120000
+	},
+	"menu-settings-service-ticketing": {
+		"title": "Customer Service Ticketing",
+		"parent": "menu-site-settings",
+		"weight": 130000
+	},
+	"menu-settings-quickbooks": {
+		"title": "QuickBooks",
+		"parent": "menu-site-settings",
+		"weight": 140000
+	},
+	"menu-settings-api-integration": {
+		"title": "API Integration",
+		"parent": "menu-site-settings",
+		"weight": 150000
+	},
+	"menu-generalsettings": {
+		"title": "Site Management",
+		"parent": "menu-site-settings",
+		"weight": 170000
+	},
+	"menu-settings-secure-redirect": {
+		"title": "Secure Domain Redirection",
+		"parent": "menu-site-settings",
+		"weight": 180000
+	},
+	"menu-settings-beta-features": {
+		"title": "Beta Features",
+		"parent": "menu-site-settings",
+		"weight": 190000
+	}
+}

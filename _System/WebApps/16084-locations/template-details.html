@@ -1,0 +1,75 @@
+<script type="text/javascript">var jslang='EN';</script>
+<link rel="stylesheet" href="/CatalystStyles/Box.css?vs=b1879.r397629" type="text/css" media="screen" />
+<script type="text/javascript" src="/CatalystScripts/Java_OnlineShopping.js?vs=b1879.r397629"></script>
+<script type="text/javascript" src="/CatalystScripts/Java_Cookies.js?vs=b1879.r397629"></script>
+<script type="text/javascript" src="/CatalystScripts/Java_Box.js?vs=b1879.r397629"></script>
+<script type="text/javascript" src="/ajaxpro/prototype-core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/CMS.CatalogueRetrieve,Catalyst.Web.CMS.ashx"></script>
+  <!-- Main Page Content and Sidebar -->
+ 
+  <div class="row marketing">
+ 
+    <!-- Contact Details -->
+    <div class="col-md-9">
+ 
+		<div class="media">
+		  <div class="media-body">
+		    <h2>{tag_name}</h2>
+		      <p class="pull-left"><img src="{tag_photo_value}" width="250" class="img-polaroid"><br/><small class="muted">{tag_caption}</small>{tag_description}</p>
+		  </div>
+		</div>
+		 
+		<div class="row">
+		    <span id="event-price" style="display:none;">{tag_event price}</span>
+		    <input class="btn btn-primary btn-lg" name="AddToCart_Submit" type="submit" value="Reserve your seats today!" onclick="AddToCart(192436,{tag_productid},'',4,'','',true);return false;" />
+		</div>
+
+    </div>
+ 
+    <!-- End Contact Details -->
+ 
+ 
+    <!-- Sidebar -->
+ 
+    <aside class="col-md-3">
+ 
+      <h3>Map</h3>
+ 
+      <!-- Clicking this placeholder fires the mapModal Reveal modal -->
+      <p>
+	        <iframe width="270" height="189" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Adobe+Systems+San+Francisco,+601+Townsend+Street,+San+Francisco,+CA+94103&amp;aq=0&amp;oq=Adobe+Systems+601+Townsend+Street+San+Francisco,+CA+94103&amp;sll=37.765287,-122.148743&amp;sspn=0.683941,1.316986&amp;ie=UTF8&amp;hq=Adobe+Systems&amp;hnear=601+Townsend+St,+San+Francisco,+California+94103&amp;t=m&amp;cid=7657507985557832261&amp;ll=37.771393,-122.402029&amp;spn=0.025442,0.04283&amp;z=14&amp;iwloc=A&amp;output=embed&amp;iwloc=near"></iframe>
+	        <br />
+        <a href="" data-toggle="modal" data-target="#mapModal">View Map</a>
+      </p>
+ 
+      <address>
+      	<strong>{tag_venue}</strong><br/>
+        {tag_address1}<br />
+        {tag_addresscity}, {tag_addressstate}  {tag_addresszipcode}<br/>
+		<abbr title="Phone">P:</abbr> {tag_phone}        
+      </address>
+      <hr>
+	  {module_contentholder,name="Aside - Newsletter Signup"}
+	  <hr>
+	  {module_contentholder,name="Aside - BC News"}
+
+    </aside>
+ 
+    <!-- End Sidebar -->
+  </div>
+ 
+  <!-- End Main Content and Sidebar -->
+ 
+  <!-- Map Modal -->
+ 
+  <div class="modal hide fade" id="mapModal">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3>{tag_venue}</h3>
+    </div>
+    <div class="modal-body">
+	    <iframe width="530" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Adobe+Systems+San+Francisco,+Townsend+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=adobe+syste&amp;sll=37.6,-95.665&amp;sspn=43.407122,84.287109&amp;ie=UTF8&amp;hq=Adobe+Systems&amp;hnear=Townsend+St,+San+Francisco,+California&amp;t=m&amp;cid=7657507985557832261&amp;ll=37.771393,-122.402029&amp;spn=0.025442,0.045404&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+    </div>
+  </div>
+ 
+  <!-- End Modal -->

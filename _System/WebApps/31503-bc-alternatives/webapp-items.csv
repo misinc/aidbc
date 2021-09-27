@@ -1,0 +1,63 @@
+External ID,Item Name,Item Description,Release Date,Expiry Date,Weight,Template ID,Enabled,EntityId,Classifications,Address,N/A,City,State,Zipcode,Country of domain purchase is made from,Photo,Link
+8116228,Duda,"<p>Duda offers a visual design tool for agencies building websites.</p>
+<ul class=""list-unstyled"">
+    <li><i class=""far fa-check-circle""></i> Partner Portal</li>
+    <li><i class=""far fa-check-circle""></i> Hosting</li>
+    <li><i class=""far fa-check-circle""></i> Easy to use visual editor</li>
+    <li><i class=""far fa-check-circle""></i> CMS Editor for clients</li>
+    <li><i class=""far fa-check-circle""></i> Web Forms (drag and drop interface)</li>
+    <li><i class=""far fa-check-circle""></i> Blog</li>
+    <li><i class=""far fa-check-circle""></i> E-commerce (not natively, but includes Ecwid integration)</li>
+    <li><i class=""far fa-circle""></i> Client Billing</li>
+    <li><i class=""far fa-question-circle""></i> Code Export</li>
+</ul>",05-Apr-2018,01-Jan-9999,,0,N, -1,,,,,,,,/images/icons/iu.png,http://www.duda.co
+8116252,Platform OS,,05-Apr-2018,01-Jan-9999,,0,Y, -1,,,,,,,,https://dmtyylqvwgyxw.cloudfront.net/instances/163/assets/images/platformos/platformos-logo.svg?updated=1522945006,https://www.platform-os.com/business-catalyst-partners
+8116248,Shopify,"<p>Shopify offers full-featured e-commerce platform for more aadvanced stores.</p>
+<ul class=""list-unstyled"">
+    <li><i class=""far fa-check-circle""></i> Dashboard with a list of sites</li>
+    <li><i class=""far fa-check-circle""></i> Hosting</li>
+    <li><i class=""far fa-check-circle""></i> Code Export</li>
+    <li><i class=""far fa-check-circle""></i> Easy to use editor</li>
+    <li><i class=""far fa-check-circle""></i> CMS Editor for clients</li>
+    <li><i class=""far fa-check-circle""></i> Client Billing</li>
+    <li><i class=""far fa-check-circle""></i> Blog</li>
+    <li><i class=""far fa-check-circle""></i> E-commerce</li>
+</ul>",05-Apr-2018,01-Jan-9999,,0,Y, -1,,,,,,,,/images/icons/shopify-logo.png,https://www.shopify.com/?ref=misinc&subid1=aidbc&utm_campaign=AID%2BBC
+8116078,Webflow,"<p>Webflow offers full control over CSS using a visual interface.</p>
+<ul class=""list-unstyled"">
+    <li><i class=""far fa-check-circle""></i> Dashboard with a list of sites (not grouped)</li>
+    <li><i class=""far fa-check-circle""></i> Hosting</li>
+    <li><i class=""far fa-check-circle""></i> Code Export</li>
+    <li><i class=""far fa-check-circle""></i> Easy to use visual editor</li>
+    <li><i class=""far fa-check-circle""></i> CMS Editor for clients</li>
+    <li><i class=""far fa-check-circle""></i> Client Billing</li>
+    <li><i class=""far fa-check-circle""></i> Web Forms (drag and drop interface)</li>
+    <li><i class=""far fa-check-circle""></i> Blogs (supports multiple blogs)</li>
+    <li><i class=""far fa-check-circle""></i> E-commerce (coming soon)</li>
+</ul>",05-Apr-2018,01-Jan-9999,,0,Y, -1,,,,,,,,/images/icons/webflow-logo.png,https://webflow.com?rfsn=1161739.ac5a5
+8116068,Weebly Cloud,"<p>Weebly Cloud is aimed at small, medium or large Web Design agencies. They offer:</p>
+<ul class=""list-unstyled"">
+    <li><i class=""far fa-check-circle""></i> Partner Portal</li>
+    <li><i class=""far fa-check-circle""></i> Hosting</li>
+    <li><i class=""far fa-check-circle""></i> White-Label</li>
+    <li><i class=""far fa-check-circle""></i> CMS with an easy to use visual editor</li>
+    <li><i class=""far fa-check-circle""></i> Web Forms (drag and drop interface with autoresponders)</li>
+    <li><i class=""far fa-check-circle""></i> Blogs (supports multiple blogs)</li>
+    <li><i class=""far fa-check-circle""></i> Secure Zones (Members & Groups)</li>
+    <li><i class=""far fa-check-circle""></i> Analytics</li>
+    <li><i class=""far fa-check-circle""></i> E-commerce</li>
+    <li><i class=""far fa-check-circle""></i> Email Accounts (via G Suite)</li>
+    <li><i class=""far fa-check-circle""></i> Email Marketing (coming soon via Weebly Promote Integration)</li>
+    <li><i class=""far fa-check-circle""></i> Domain Names (coming soon &mdash; manage and resell domain names)</li>
+</ul>",05-Apr-2018,01-Jan-9999,,0,Y, -1,,,,,,,,/images/icons/weebly-cloud-logo.png,https://bc-partners.weebly.com/
+8752429,WordPress,"<p>WordPress is the most popular CMS platform and offers an almost unlimited variety of themes and plugins to be able to handue any website.</p>
+<ul class=""list-unstyled"">
+    <li><i class=""far fa-check-circle""></i> Any WordPress Hosting Company</li>
+    <li><i class=""far fa-check-circle""></i> Easy to use admin interface</li>
+    <li><i class=""far fa-check-circle""></i> CMS Editor for clients</li>
+    <li><i class=""far fa-check-circle""></i> Web Forms (drag and drop interface)</li>
+    <li><i class=""far fa-check-circle""></i> Blog</li>
+    <li><i class=""far fa-check-circle""></i> E-commerce via WooCommerce</li>
+    <li><i class=""far fa-circle""></i> Client Billing</li>
+    <li><i class=""far fa-question-circle""></i> Code Export</li>
+</ul>",17-May-2019,01-Jan-9999,,0,Y, -1,,,,,,,,/images/icons/wordpress_W_logo.png,https://www.wordpress.org
