@@ -1272,7 +1272,7 @@
 				delete settings.items;
 			}
 	
-			// feature detect for the validation API
+			// feature detect for the  API
 			if ($input[0].validity) {
 				$input.on('invalid' + eventNS, function(e) {
 					e.preventDefault();

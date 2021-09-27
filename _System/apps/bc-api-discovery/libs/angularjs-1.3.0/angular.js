@@ -17854,10 +17854,10 @@ function nullFormRenameControl(control, name) {
  * @property {Object} $error Is an object hash, containing references to controls or
  *  forms with failing validators, where:
  *
- *  - keys are validation tokens (error names),
+ *  - keys are  tokens (error names),
  *  - values are arrays of controls or forms that have a failing validator for given error name.
  *
- *  Built-in validation tokens:
+ *  Built-in  tokens:
  *
  *  - `email`
  *  - `max`
@@ -18136,7 +18136,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  * forms are valid as well. However, browsers do not allow nesting of `<form data-netlify="true">` elements, so
  * Angular provides the {@link ng.directive:ngForm `ngForm`} directive which behaves identically to
  * `<form data-netlify="true">` but can be nested.  This allows you to have nested forms, which is very useful when
- * using Angular validation directives in forms that are dynamically generated using the
+ * using Angular  directives in forms that are dynamically generated using the
  * {@link ng.directive:ngRepeat `ngRepeat`} directive. Since you cannot dynamically generate the `name`
  * attribute of input elements using interpolation, you have to wrap each set of repeated inputs in an
  * `ngForm` directive and nest these in an outer `form` element.
@@ -18189,7 +18189,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  *
  * Animations in ngForm are triggered when any of the associated CSS classes are added and removed.
  * These classes are: `.ng-pristine`, `.ng-dirty`, `.ng-invalid` and `.ng-valid` as well as any
- * other validations that are performed within the form. Animations in ngForm are similar to how
+ * other s that are performed within the form. Animations in ngForm are similar to how
  * they work in ngClass and animations can be hooked into using CSS transitions, keyframes as well
  * as JS animations.
  *
@@ -18373,15 +18373,15 @@ var inputType = {
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} required Adds `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} required Adds `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+   * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
    *    minlength.
-   * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+   * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
    *    maxlength.
-   * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+   * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
    *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
    *    patterns defined as scope expressions.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18449,7 +18449,7 @@ var inputType = {
      * @name input[date]
      *
      * @description
-     * Input with date validation and transformation. In browsers that do not yet support
+     * Input with date  and transformation. In browsers that do not yet support
      * the HTML5 date input, a text element will be used. In that case, text must be entered in a valid ISO-8601
      * date format (yyyy-MM-dd), for example: `2009-01-06`. Since many
      * modern browsers do not yet support this input type, it is important to provide cues to users on the
@@ -18460,12 +18460,12 @@ var inputType = {
      *
      * @param {string} ngModel Assignable angular expression to data-bind to.
      * @param {string=} name Property name of the form under which the control is published.
-     * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
+     * @param {string=} min Sets the `min`  error key if the value entered is less than `min`. This must be a
      * valid ISO date string (yyyy-MM-dd).
-     * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
+     * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`. This must be
      * a valid ISO date string (yyyy-MM-dd).
-     * @param {string=} required Sets `required` validation error key if the value is not entered.
-     * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+     * @param {string=} required Sets `required`  error key if the value is not entered.
+     * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
      *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
      *    `required` when you want to data-bind to the `required` attribute.
      * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18504,7 +18504,7 @@ var inputType = {
         // sending keys to all known HTML5 input controls
         // for various browsers (see https://github.com/angular/protractor/issues/562).
         function setInput(val) {
-          // set the value of the element and force validation.
+          // set the value of the element and force .
           var scr = "var ipt = document.getElementById('exampleInput'); " +
           "ipt.value = '" + val + "';" +
           "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
@@ -18539,7 +18539,7 @@ var inputType = {
     * @name input[dateTimeLocal]
     *
     * @description
-    * Input with datetime validation and transformation. In browsers that do not yet support
+    * Input with datetime  and transformation. In browsers that do not yet support
     * the HTML5 date input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
     * local datetime format (yyyy-MM-ddTHH:mm:ss), for example: `2010-12-28T14:57:00`. The model must be a Date object.
     *
@@ -18548,12 +18548,12 @@ var inputType = {
     *
     * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
-    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
+    * @param {string=} min Sets the `min`  error key if the value entered is less than `min`. This must be a
     * valid ISO datetime format (yyyy-MM-ddTHH:mm:ss).
-    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
+    * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`. This must be
     * a valid ISO datetime format (yyyy-MM-ddTHH:mm:ss).
-    * @param {string=} required Sets `required` validation error key if the value is not entered.
-    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+    * @param {string=} required Sets `required`  error key if the value is not entered.
+    * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
     *    `required` when you want to data-bind to the `required` attribute.
     * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18592,7 +18592,7 @@ var inputType = {
       // sending keys to all known HTML5 input controls
       // for various browsers (https://github.com/angular/protractor/issues/562).
       function setInput(val) {
-        // set the value of the element and force validation.
+        // set the value of the element and force .
         var scr = "var ipt = document.getElementById('exampleInput'); " +
         "ipt.value = '" + val + "';" +
         "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
@@ -18627,7 +18627,7 @@ var inputType = {
    * @name input[time]
    *
    * @description
-   * Input with time validation and transformation. In browsers that do not yet support
+   * Input with time  and transformation. In browsers that do not yet support
    * the HTML5 date input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
    * local time format (HH:mm:ss), for example: `14:57:00`. Model must be a Date object. This binding will always output a
    * Date object to the model of January 1, 1970, or local date `new Date(1970, 0, 1, HH, mm, ss)`.
@@ -18637,12 +18637,12 @@ var inputType = {
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
+   * @param {string=} min Sets the `min`  error key if the value entered is less than `min`. This must be a
    * valid ISO time format (HH:mm:ss).
-   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be a
+   * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`. This must be a
    * valid ISO time format (HH:mm:ss).
-   * @param {string=} required Sets `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} required Sets `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18681,7 +18681,7 @@ var inputType = {
       // sending keys to all known HTML5 input controls
       // for various browsers (https://github.com/angular/protractor/issues/562).
       function setInput(val) {
-        // set the value of the element and force validation.
+        // set the value of the element and force .
         var scr = "var ipt = document.getElementById('exampleInput'); " +
         "ipt.value = '" + val + "';" +
         "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
@@ -18716,7 +18716,7 @@ var inputType = {
     * @name input[week]
     *
     * @description
-    * Input with week-of-the-year validation and transformation to Date. In browsers that do not yet support
+    * Input with week-of-the-year  and transformation to Date. In browsers that do not yet support
     * the HTML5 week input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
     * week format (yyyy-W##), for example: `2013-W02`. The model must always be a Date object.
     *
@@ -18725,12 +18725,12 @@ var inputType = {
     *
     * @param {string} ngModel Assignable angular expression to data-bind to.
     * @param {string=} name Property name of the form under which the control is published.
-    * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be a
+    * @param {string=} min Sets the `min`  error key if the value entered is less than `min`. This must be a
     * valid ISO week format (yyyy-W##).
-    * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must be
+    * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`. This must be
     * a valid ISO week format (yyyy-W##).
-    * @param {string=} required Sets `required` validation error key if the value is not entered.
-    * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+    * @param {string=} required Sets `required`  error key if the value is not entered.
+    * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
     *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
     *    `required` when you want to data-bind to the `required` attribute.
     * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18769,7 +18769,7 @@ var inputType = {
       // sending keys to all known HTML5 input controls
       // for various browsers (https://github.com/angular/protractor/issues/562).
       function setInput(val) {
-        // set the value of the element and force validation.
+        // set the value of the element and force .
         var scr = "var ipt = document.getElementById('exampleInput'); " +
         "ipt.value = '" + val + "';" +
         "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
@@ -18802,7 +18802,7 @@ var inputType = {
    * @name input[month]
    *
    * @description
-   * Input with month validation and transformation. In browsers that do not yet support
+   * Input with month  and transformation. In browsers that do not yet support
    * the HTML5 month input, a text element will be used. In that case, the text must be entered in a valid ISO-8601
    * month format (yyyy-MM), for example: `2009-01`. The model must always be a Date object. In the event the model is
    * not set to the first of the month, the first of that model's month is assumed.
@@ -18812,12 +18812,12 @@ var inputType = {
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`. This must be
+   * @param {string=} min Sets the `min`  error key if the value entered is less than `min`. This must be
    * a valid ISO month format (yyyy-MM).
-   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`. This must
+   * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`. This must
    * be a valid ISO month format (yyyy-MM).
-   * @param {string=} required Sets `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} required Sets `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18856,7 +18856,7 @@ var inputType = {
       // sending keys to all known HTML5 input controls
       // for various browsers (https://github.com/angular/protractor/issues/562).
       function setInput(val) {
-        // set the value of the element and force validation.
+        // set the value of the element and force .
         var scr = "var ipt = document.getElementById('exampleInput'); " +
         "ipt.value = '" + val + "';" +
         "angular.element(ipt).scope().$apply(function(s) { s.myForm[ipt.name].$setViewValue('" + val + "'); });";
@@ -18891,22 +18891,22 @@ var inputType = {
    * @name input[number]
    *
    * @description
-   * Text input with number validation and transformation. Sets the `number` validation
+   * Text input with number  and transformation. Sets the `number` 
    * error if not a valid number.
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} min Sets the `min` validation error key if the value entered is less than `min`.
-   * @param {string=} max Sets the `max` validation error key if the value entered is greater than `max`.
-   * @param {string=} required Sets `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} min Sets the `min`  error key if the value entered is less than `min`.
+   * @param {string=} max Sets the `max`  error key if the value entered is greater than `max`.
+   * @param {string=} required Sets `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+   * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
    *    minlength.
-   * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+   * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
    *    maxlength.
-   * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+   * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
    *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
    *    patterns defined as scope expressions.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -18969,20 +18969,20 @@ var inputType = {
    * @name input[url]
    *
    * @description
-   * Text input with URL validation. Sets the `url` validation error key if the content is not a
+   * Text input with URL . Sets the `url`  error key if the content is not a
    * valid URL.
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} required Sets `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} required Sets `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+   * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
    *    minlength.
-   * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+   * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
    *    maxlength.
-   * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+   * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
    *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
    *    patterns defined as scope expressions.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -19046,20 +19046,20 @@ var inputType = {
    * @name input[email]
    *
    * @description
-   * Text input with email validation. Sets the `email` validation error key if not a valid email
+   * Text input with email . Sets the `email`  error key if not a valid email
    * address.
    *
    * @param {string} ngModel Assignable angular expression to data-bind to.
    * @param {string=} name Property name of the form under which the control is published.
-   * @param {string=} required Sets `required` validation error key if the value is not entered.
-   * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+   * @param {string=} required Sets `required`  error key if the value is not entered.
+   * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
    *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
    *    `required` when you want to data-bind to the `required` attribute.
-   * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+   * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
    *    minlength.
-   * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+   * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
    *    maxlength.
-   * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+   * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
    *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
    *    patterns defined as scope expressions.
    * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -19499,8 +19499,8 @@ function createDateInputType(type, regexp, parseDate, format) {
 
 function badInputChecker(scope, element, attr, ctrl) {
   var node = element[0];
-  var nativeValidation = ctrl.$$hasNativeValidators = isObject(node.validity);
-  if (nativeValidation) {
+  var native = ctrl.$$hasNativeValidators = isObject(node.validity);
+  if (native) {
     ctrl.$parsers.push(function(value) {
       var validity = element.prop(VALIDITY_STATE_PROPERTY) || {};
       // Detect bug in FF35 for input[email] (https://bugzilla.mozilla.org/show_bug.cgi?id=1064430):
@@ -19544,7 +19544,7 @@ function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
         val = parseFloat(val, 10);
       }
       minVal = isNumber(val) && !isNaN(val) ? val : undefined;
-      // TODO(matsko): implement validateLater to reduce number of validations
+      // TODO(matsko): implement validateLater to reduce number of s
       ctrl.$validate();
     });
   }
@@ -19560,14 +19560,14 @@ function numberInputType(scope, element, attr, ctrl, $sniffer, $browser) {
         val = parseFloat(val, 10);
       }
       maxVal = isNumber(val) && !isNaN(val) ? val : undefined;
-      // TODO(matsko): implement validateLater to reduce number of validations
+      // TODO(matsko): implement validateLater to reduce number of s
       ctrl.$validate();
     });
   }
 }
 
 function urlInputType(scope, element, attr, ctrl, $sniffer, $browser) {
-  // Note: no badInputChecker here by purpose as `url` is only a validation
+  // Note: no badInputChecker here by purpose as `url` is only a 
   // in browsers, i.e. we can always read out input.value even if it is not valid!
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
   stringBasedInputType(ctrl);
@@ -19579,7 +19579,7 @@ function urlInputType(scope, element, attr, ctrl, $sniffer, $browser) {
 }
 
 function emailInputType(scope, element, attr, ctrl, $sniffer, $browser) {
-  // Note: no badInputChecker here by purpose as `url` is only a validation
+  // Note: no badInputChecker here by purpose as `url` is only a 
   // in browsers, i.e. we can always read out input.value even if it is not valid!
   baseInputType(scope, element, attr, ctrl, $sniffer, $browser);
   stringBasedInputType(ctrl);
@@ -19660,21 +19660,21 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  * @restrict E
  *
  * @description
- * HTML textarea element control with angular data-binding. The data-binding and validation
+ * HTML textarea element control with angular data-binding. The data-binding and 
  * properties of this element are exactly the same as those of the
  * {@link ng.directive:input input element}.
  *
  * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
- * @param {string=} required Sets `required` validation error key if the value is not entered.
- * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+ * @param {string=} required Sets `required`  error key if the value is not entered.
+ * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
  *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
  *    `required` when you want to data-bind to the `required` attribute.
- * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+ * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
  *    minlength.
- * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+ * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
  *    maxlength.
- * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+ * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
  *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
  *    patterns defined as scope expressions.
  * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -19690,19 +19690,19 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
  *
  * @description
  * HTML input element control with angular data-binding. Input control follows HTML5 input types
- * and polyfills the HTML5 validation behavior for older browsers.
+ * and polyfills the HTML5  behavior for older browsers.
  *
  * *NOTE* Not every feature offered is available for all input types.
  *
  * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
- * @param {string=} required Sets `required` validation error key if the value is not entered.
+ * @param {string=} required Sets `required`  error key if the value is not entered.
  * @param {boolean=} ngRequired Sets `required` attribute if set to true
- * @param {number=} ngMinlength Sets `minlength` validation error key if the value is shorter than
+ * @param {number=} ngMinlength Sets `minlength`  error key if the value is shorter than
  *    minlength.
- * @param {number=} ngMaxlength Sets `maxlength` validation error key if the value is longer than
+ * @param {number=} ngMaxlength Sets `maxlength`  error key if the value is longer than
  *    maxlength.
- * @param {string=} ngPattern Sets `pattern` validation error key if the value does not match the
+ * @param {string=} ngPattern Sets `pattern`  error key if the value does not match the
  *    RegExp pattern expression. Expected value is `/regexp/` for inline patterns or `regexp` for
  *    patterns defined as scope expressions.
  * @param {string=} ngChange Angular expression to be executed when input changes due to user
@@ -19832,7 +19832,7 @@ var VALID_CLASS = 'ng-valid',
  * @property {Array.<Function>} $parsers Array of functions to execute, as a pipeline, whenever
        the control reads value from the DOM.  Each function is called, in turn, passing the value
        through to the next. The last return value is used to populate the model.
-       Used to sanitize / convert the value as well as validation. For validation,
+       Used to sanitize / convert the value as well as . For ,
        the parsers should update the validity state using
        {@link ngModel.NgModelController#$setValidity $setValidity()},
        and return `undefined` for invalid values.
@@ -19840,7 +19840,7 @@ var VALID_CLASS = 'ng-valid',
  *
  * @property {Array.<Function>} $formatters Array of functions to execute, as a pipeline, whenever
        the model value changes. Each function is called, in turn, passing the value through to the
-       next. Used to format / convert values for display in the control and validation.
+       next. Used to format / convert values for display in the control and .
  * ```js
  * function formatter(value) {
  *   if (value) {
@@ -19852,9 +19852,9 @@ var VALID_CLASS = 'ng-valid',
  *
  * @property {Object.<string, function>} $validators A collection of validators that are applied
  *      whenever the model value changes. The key value within the object refers to the name of the
- *      validator while the function refers to the validation operation. The validation operation is
+ *      validator while the function refers to the  operation. The  operation is
  *      provided with the model value as an argument and must return a true or false value depending
- *      on the response of that validation.
+ *      on the response of that .
  *
  * ```js
  * ngModel.$validators.validCharacters = function(modelValue, viewValue) {
@@ -19866,16 +19866,16 @@ var VALID_CLASS = 'ng-valid',
  * };
  * ```
  *
- * @property {Object.<string, function>} $asyncValidators A collection of validations that are expected to
- *      perform an asynchronous validation (e.g. a HTTP request). The validation function that is provided
- *      is expected to return a promise when it is run during the model validation process. Once the promise
- *      is delivered then the validation status will be set to true when fulfilled and false when rejected.
+ * @property {Object.<string, function>} $asyncValidators A collection of s that are expected to
+ *      perform an asynchronous  (e.g. a HTTP request). The  function that is provided
+ *      is expected to return a promise when it is run during the model  process. Once the promise
+ *      is delivered then the  status will be set to true when fulfilled and false when rejected.
  *      When the asynchronous validators are triggered, each of the validators will run in parallel and the model
  *      value will only be updated once all validators have been fulfilled. Also, keep in mind that all
  *      asynchronous validators will only run once all synchronous validators have passed.
  *
  * Please note that if $http is used then it is important that the server returns a success HTTP response code
- * in order to fulfill the validation and a status level of `4xx` in order to reject the validation.
+ * in order to fulfill the  and a status level of `4xx` in order to reject the .
  *
  * ```js
  * ngModel.$asyncValidators.uniqueUsername = function(modelValue, viewValue) {
@@ -19884,17 +19884,17 @@ var VALID_CLASS = 'ng-valid',
  *   // Lookup user by username
  *   return $http.get('/api/users/' + value).
  *      then(function resolved() {
- *        //username exists, this means validation fails
+ *        //username exists, this means  fails
  *        return $q.reject('exists');
  *      }, function rejected() {
- *        //username does not exist, therefore this validation passes
+ *        //username does not exist, therefore this  passes
  *        return true;
  *      });
  * };
  * ```
  *
  * @param {string} name The name of the validator.
- * @param {Function} validationFn The validation function that will be run.
+ * @param {Function} Fn The  function that will be run.
  *
  * @property {Array.<Function>} $viewChangeListeners Array of functions to execute whenever the
  *     view value has changed. It is called with no arguments, and its return value is ignored.
@@ -19913,7 +19913,7 @@ var VALID_CLASS = 'ng-valid',
  * @description
  *
  * `NgModelController` provides API for the `ng-model` directive. The controller contains
- * services for data-binding, validation, CSS updates, and value formatting and parsing. It
+ * services for data-binding, , CSS updates, and value formatting and parsing. It
  * purposefully does not contain any logic which deals with DOM rendering or listening to
  * DOM events. Such DOM related logic should be provided by other directives which make use of
  * `NgModelController` for data-binding.
@@ -20108,7 +20108,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
   };
 
   var parentForm = $element.inheritedData('$formController') || nullFormCtrl,
-      currentValidationRunId = 0;
+      currentRunId = 0;
 
   /**
    * @ngdoc method
@@ -20120,10 +20120,10 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    * This method can be called within $parsers/$formatters. However, if possible, please use the
    *        `ngModel.$validators` pipeline which is designed to call this method automatically.
    *
-   * @param {string} validationErrorKey Name of the validator. the `validationErrorKey` will assign
-   *        to `$error[validationErrorKey]` and `$pending[validationErrorKey]`
+   * @param {string} ErrorKey Name of the validator. the `ErrorKey` will assign
+   *        to `$error[ErrorKey]` and `$pending[ErrorKey]`
    *        so that it is available for data-binding.
-   *        The `validationErrorKey` should be in camelCase and will get converted into dash-case
+   *        The `ErrorKey` should be in camelCase and will get converted into dash-case
    *        for class name. Example: `myError` will result in `ng-valid-my-error` and `ng-invalid-my-error`
    *        class and can be bound to as  `{{someForm.someControl.$error.myError}}` .
    * @param {boolean} isValid Whether the current state is valid (true), invalid (false), pending (undefined),
@@ -20277,16 +20277,16 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
   };
 
   this.$$runValidators = function(parseValid, modelValue, viewValue, doneCallback) {
-    currentValidationRunId++;
-    var localValidationRunId = currentValidationRunId;
+    currentRunId++;
+    var localRunId = currentRunId;
 
     // check parser error
     if (!processParseErrors(parseValid)) {
-      validationDone(false);
+      Done(false);
       return;
     }
     if (!processSyncValidators()) {
-      validationDone(false);
+      Done(false);
       return;
     }
     processAsyncValidators();
@@ -20344,22 +20344,22 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
         }));
       });
       if (!validatorPromises.length) {
-        validationDone(true);
+        Done(true);
       } else {
         $q.all(validatorPromises).then(function() {
-          validationDone(allValid);
+          Done(allValid);
         }, noop);
       }
     }
 
     function setValidity(name, isValid) {
-      if (localValidationRunId === currentValidationRunId) {
+      if (localRunId === currentRunId) {
         ctrl.$setValidity(name, isValid);
       }
     }
 
-    function validationDone(allValid) {
-      if (localValidationRunId === currentValidationRunId) {
+    function Done(allValid) {
+      if (localRunId === currentRunId) {
 
         doneCallback(allValid);
       }
@@ -20383,7 +20383,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
     $timeout.cancel(pendingDebounce);
 
     // If the view value has not changed then we should just exit, except in the case where there is
-    // a native validator on the element. In this case the validation state may have changed even though
+    // a native validator on the element. In this case the  state may have changed even though
     // the viewValue has stayed empty.
     if (ctrl.$$lastCommittedViewValue === viewValue && (viewValue !== '' || !ctrl.$$hasNativeValidators)) {
       return;
@@ -20582,8 +20582,8 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *
  * - Binding the view into the model, which other directives such as `input`, `textarea` or `select`
  *   require.
- * - Providing validation behavior (i.e. required, number, email, url).
- * - Keeping the state of the control (valid/invalid, dirty/pristine, touched/untouched, validation errors).
+ * - Providing  behavior (i.e. required, number, email, url).
+ * - Keeping the state of the control (valid/invalid, dirty/pristine, touched/untouched,  errors).
  * - Setting related css classes on the element (`ng-valid`, `ng-invalid`, `ng-dirty`, `ng-pristine`, `ng-touched`, `ng-untouched`) including animations.
  * - Registering the control with its parent {@link ng.directive:form form}.
  *
@@ -20627,7 +20627,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *
  * Animations within models are triggered when any of the associated CSS classes are added and removed
  * on the input element which is attached to the model. These classes are: `.ng-pristine`, `.ng-dirty`,
- * `.ng-invalid` and `.ng-valid` as well as any other validations that are performed on the model itself.
+ * `.ng-invalid` and `.ng-valid` as well as any other s that are performed on the model itself.
  * The animations that are triggered within ngModel are similar to how they work in ngClass and
  * animations can be hooked into using CSS transitions, keyframes as well as JS animations.
  *
@@ -20965,7 +20965,7 @@ var minlengthDirective = function() {
  *   when joining the list items back together) and whitespace around each list item is stripped
  *   before it is added to the model.
  *
- * ### Example with Validation
+ * ### Example with 
  *
  * <example name="ngList-directive" module="listExample">
  *   <file name="app.js">
@@ -21332,51 +21332,51 @@ function addSetValidityMethod(context) {
 
   ctrl.$setValidity = setValidity;
 
-  function setValidity(validationErrorKey, state, options) {
+  function setValidity(ErrorKey, state, options) {
     if (state === undefined) {
-      createAndSet('$pending', validationErrorKey, options);
+      createAndSet('$pending', ErrorKey, options);
     } else {
-      unsetAndCleanup('$pending', validationErrorKey, options);
+      unsetAndCleanup('$pending', ErrorKey, options);
     }
     if (!isBoolean(state)) {
-      unset(ctrl.$error, validationErrorKey, options);
-      unset(ctrl.$$success, validationErrorKey, options);
+      unset(ctrl.$error, ErrorKey, options);
+      unset(ctrl.$$success, ErrorKey, options);
     } else {
       if (state) {
-        unset(ctrl.$error, validationErrorKey, options);
-        set(ctrl.$$success, validationErrorKey, options);
+        unset(ctrl.$error, ErrorKey, options);
+        set(ctrl.$$success, ErrorKey, options);
       } else {
-        set(ctrl.$error, validationErrorKey, options);
-        unset(ctrl.$$success, validationErrorKey, options);
+        set(ctrl.$error, ErrorKey, options);
+        unset(ctrl.$$success, ErrorKey, options);
       }
     }
     if (ctrl.$pending) {
       cachedToggleClass(PENDING_CLASS, true);
       ctrl.$valid = ctrl.$invalid = undefined;
-      toggleValidationCss('', null);
+      toggleCss('', null);
     } else {
       cachedToggleClass(PENDING_CLASS, false);
       ctrl.$valid = isObjectEmpty(ctrl.$error);
       ctrl.$invalid = !ctrl.$valid;
-      toggleValidationCss('', ctrl.$valid);
+      toggleCss('', ctrl.$valid);
     }
 
     // re-read the state as the set/unset methods could have
-    // combined state in ctrl.$error[validationError] (used for forms),
+    // combined state in ctrl.$error[Error] (used for forms),
     // where setting/unsetting only increments/decrements the value,
     // and does not replace it.
     var combinedState;
-    if (ctrl.$pending && ctrl.$pending[validationErrorKey]) {
+    if (ctrl.$pending && ctrl.$pending[ErrorKey]) {
       combinedState = undefined;
-    } else if (ctrl.$error[validationErrorKey]) {
+    } else if (ctrl.$error[ErrorKey]) {
       combinedState = false;
-    } else if (ctrl.$$success[validationErrorKey]) {
+    } else if (ctrl.$$success[ErrorKey]) {
       combinedState = true;
     } else {
       combinedState = null;
     }
-    toggleValidationCss(validationErrorKey, combinedState);
-    parentForm.$setValidity(validationErrorKey, combinedState, ctrl);
+    toggleCss(ErrorKey, combinedState);
+    parentForm.$setValidity(ErrorKey, combinedState, ctrl);
   }
 
   function createAndSet(name, value, options) {
@@ -21405,11 +21405,11 @@ function addSetValidityMethod(context) {
     }
   }
 
-  function toggleValidationCss(validationErrorKey, isValid) {
-    validationErrorKey = validationErrorKey ? '-' + snake_case(validationErrorKey, '-') : '';
+  function toggleCss(ErrorKey, isValid) {
+    ErrorKey = ErrorKey ? '-' + snake_case(ErrorKey, '-') : '';
 
-    cachedToggleClass(VALID_CLASS + validationErrorKey, isValid === true);
-    cachedToggleClass(INVALID_CLASS + validationErrorKey, isValid === false);
+    cachedToggleClass(VALID_CLASS + ErrorKey, isValid === true);
+    cachedToggleClass(INVALID_CLASS + ErrorKey, isValid === false);
   }
 }
 
@@ -24885,7 +24885,7 @@ var ngOptionsMinErr = minErr('ngOptions');
  * @param {string} ngModel Assignable angular expression to data-bind to.
  * @param {string=} name Property name of the form under which the control is published.
  * @param {string=} required The control is considered valid only if value is entered.
- * @param {string=} ngRequired Adds `required` attribute and `required` validation constraint to
+ * @param {string=} ngRequired Adds `required` attribute and `required`  constraint to
  *    the element when the ngRequired expression evaluates to true. Use `ngRequired` instead of
  *    `required` when you want to data-bind to the `required` attribute.
  * @param {comprehension_expression=} ngOptions in one of the following forms:

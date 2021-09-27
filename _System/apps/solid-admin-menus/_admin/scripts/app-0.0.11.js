@@ -640,7 +640,7 @@ function saveChanges() {
 		var url='';
 		var isUserDefined = htmlId.indexOf('ribbon-') === 0 || htmlId.indexOf('menu-AdminMenuLabels-') === 0;		
 		
-		//Validation
+		//
 		if (isValidTitle(title) === false) {	
 			errors += 'You may only add alphanumeric characters for the "Title"\n';
 		} 

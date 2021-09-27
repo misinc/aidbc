@@ -23,7 +23,7 @@ function LoadLangV(lang) {
 	}
 
 	var scr = document.createElement('script');
-	scr.setAttribute('src', '/BcJsLang/ValidationFunctions.aspx?lang=' + lang);
+	scr.setAttribute('src', '/BcJsLang/Functions.aspx?lang=' + lang);
 	scr.setAttribute('charset', "utf-8");
 	scr.setAttribute('type', 'text/javascript');
 	document.getElementsByTagName('head')[0].appendChild(scr);
@@ -588,7 +588,7 @@ if (typeof reCaptchaV2Manager == 'undefined') {
             reloadControls: function() {
             	initializeControls();
             },
-            /* Checks if the validation has been performed on the given captcha control.
+            /* Checks if the  has been performed on the given captcha control.
             */
             isInstanceVerified: function(captchaId){
                 if(typeof _controlInstances[captchaId] != "undefined") {

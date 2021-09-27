@@ -75,7 +75,7 @@
 	</form>
 </div><!-- END .forum-registration -->
 
-<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+<script type="text/javascript" src="/CatalystScripts/Functions.js"></script>
 <script type="text/javascript">
 	//<![CDATA[
 	 function check_RegistrationForm(theForm,name) {  var why = "";  if (name == 'login') {  why += isEmpty(theForm.Username.value, "Username");  why += isEmpty(theForm.Password.value, "Password");  }  else {  why += isEmpty(theForm.Registration_Name.value, "Full Name");  why += isEmpty(theForm.Registration_Email.value, "Email Address");  why += isEmpty(theForm.Registration_Username.value, "Username");  why += isEmpty(theForm.Registration_Password.value, "Password");  why += isEmpty(theForm.Registration_ConfirmPassword.value, "Password Confirmation");  }  if (why != "") {   alert(why);   return false;  }    return true; }

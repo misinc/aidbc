@@ -52,7 +52,7 @@
 					
 					<div class="text-error">{module_error}</div>
 					
-					<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js" ></script>
+					<script type="text/javascript" src="/CatalystScripts/Functions.js" ></script>
 					<script type="text/javascript">
 					    //<![CDATA[
 					    var submitcount48727 = 0;function checkWholeForm48727(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if(why != ""){alert(why);return false;}if(submitcount48727 == 0){submitcount48727++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}

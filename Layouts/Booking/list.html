@@ -326,7 +326,7 @@
     <option value="2">Mastercard</option>
     <option value="4">American Express</option>
     </select>
-    <label for="CardCCV">CCV Number <span class="req">*</span> <a id="ccv" rel="popover" data-content="Most credit cards now have a security code number, which helps ensure your card is present during an order. Visa and Master Cards have a three-digit number on the signature panel on the back of the card, following the account number. American Express has a 4-digit number on the front of the card, above the account number. This is your card validation code." data-placement="top" data-original-title="What is a Card Security Code?">(what is this?)</a></label>
+    <label for="CardCCV">CCV Number <span class="req">*</span> <a id="ccv" rel="popover" data-content="Most credit cards now have a security code number, which helps ensure your card is present during an order. Visa and Master Cards have a three-digit number on the signature panel on the back of the card, following the account number. American Express has a 4-digit number on the front of the card, above the account number. This is your card  code." data-placement="top" data-original-title="What is a Card Security Code?">(what is this?)</a></label>
 
     <input type="text" name="CardCCV" id="CardCCV" class="cat_textbox" />
     <label for="Amount"><strong>$395 per day</strong> (early bird pricing)<span class="req">*</span> <span id="constraint-300-label"></span></label>
@@ -340,7 +340,7 @@
     <br/>
     <p><input class="btn btn-lg btn-primary" type="submit" value="Register" id="catwebformbutton" /></p>
 
-    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript" src="/CatalystScripts/Functions.js"></script>
     <script type="text/javascript">
 	//<![CDATA[
 	var submitcount10708 = 0;function checkWholeForm10708(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if (!theForm.PaymentMethodType || getRadioSelected(theForm.PaymentMethodType) == 1) { if (theForm.CardName) why += isEmpty(theForm.CardName.value, "Name on Card"); if (theForm.CardNumber) why += isNumeric(theForm.CardNumber.value, "Card Number"); if (theForm.Amount) why += isCurrency(theForm.Amount.value, "Amount"); } if (theForm.BillingAddress) why += isEmpty(theForm.BillingAddress.value, "Billing Address"); if (theForm.BillingCity) why += isEmpty(theForm.BillingCity.value, "Billing City"); if (theForm.BillingState) why += isEmpty(theForm.BillingState.value, "Billing State"); if (theForm.BillingZip) why += isEmpty(theForm.BillingZip.value, ""); if (theForm.BillingCountry) why += checkDropdown(theForm.BillingCountry.value, "Billing Country"); if(why != ""){alert(why);return false;}if(submitcount10708 == 0){submitcount10708++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
