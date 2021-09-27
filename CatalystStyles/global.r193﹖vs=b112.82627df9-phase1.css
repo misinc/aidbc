@@ -319,7 +319,7 @@ h4 {
 	text-decoration: none!important;
 	cursor: default!important;
 	pointer-events: none!important;
-	background: url(http://www.aidbc.com/AdminConsoleXT/assets/images/loading-small.gif) no-repeat right center !important;
+	background: url(https://www.aidbc.com/AdminConsoleXT/assets/images/loading-small.gif) no-repeat right center !important;
 }
 
 /* enable scrolling inside IFRAMES open inside a hybrid popup */

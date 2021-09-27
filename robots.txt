@@ -4,4 +4,4 @@ Disallow: /layouts/
 Disallow: /moduletemplates/
 Disallow: /stylesheets/
 Disallow: /templates/
-Sitemap: http://www.aidbc.com/sitemap.xml
+Sitemap: https://www.aidbc.com/sitemap.xml
