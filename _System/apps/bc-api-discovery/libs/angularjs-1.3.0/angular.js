@@ -778,7 +778,7 @@ function isLeafNode (node) {
  <example module="copyExample">
  <file name="index.html">
  <div ng-controller="ExampleController">
- <form data-netlify="true" novalidate class="simple-form">
+ <form data-netlify-recaptcha="true" data-netlify="true" novalidate class="simple-form">
  Name: <input type="text" ng-model="user.name" /><br />
  E-mail: <input type="email" ng-model="user.email" /><br />
  Gender: <input type="radio" ng-model="user.gender" value="male" />male
@@ -18110,7 +18110,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  * sub-group of controls needs to be determined.
  *
  * Note: the purpose of `ngForm` is to group controls,
- * but not to be a replacement for the `<form data-netlify="true">` tag with all of its capabilities
+ * but not to be a replacement for the `<form data-netlify-recaptcha="true" data-netlify="true">` tag with all of its capabilities
  * (e.g. posting to the server, ...).
  *
  * @param {string=} ngForm|name Name of the form. If specified, the form controller will be published into
@@ -18133,9 +18133,9 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  * # Alias: {@link ng.directive:ngForm `ngForm`}
  *
  * In Angular forms can be nested. This means that the outer form is valid when all of the child
- * forms are valid as well. However, browsers do not allow nesting of `<form data-netlify="true">` elements, so
+ * forms are valid as well. However, browsers do not allow nesting of `<form data-netlify-recaptcha="true" data-netlify="true">` elements, so
  * Angular provides the {@link ng.directive:ngForm `ngForm`} directive which behaves identically to
- * `<form data-netlify="true">` but can be nested.  This allows you to have nested forms, which is very useful when
+ * `<form data-netlify-recaptcha="true" data-netlify="true">` but can be nested.  This allows you to have nested forms, which is very useful when
  * using Angular  directives in forms that are dynamically generated using the
  * {@link ng.directive:ngRepeat `ngRepeat`} directive. Since you cannot dynamically generate the `name`
  * attribute of input elements using interpolation, you have to wrap each set of repeated inputs in an
@@ -18160,7 +18160,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
  * to handle the form submission in an application-specific way.
  *
  * For this reason, Angular prevents the default action (form submission to the server) unless the
- * `<form data-netlify="true">` element has an `action` attribute specified.
+ * `<form data-netlify-recaptcha="true" data-netlify="true">` element has an `action` attribute specified.
  *
  * You can use one of the following two ways to specify what javascript method should be called when
  * a form is submitted:
@@ -18228,7 +18228,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
           background: red;
         }
        </style>
-       <form data-netlify="true" name="myForm" ng-controller="FormController" class="my-form">
+       <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="FormController" class="my-form">
          userType: <input name="input" ng-model="userType" required>
          <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
          <tt>userType = {{userType}}</tt><br>
@@ -18400,7 +18400,7 @@ var inputType = {
                $scope.word = /^\s*\w*\s*$/;
              }]);
          </script>
-         <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
            Single word: <input type="text" name="input" ng-model="text"
                                ng-pattern="word" required ng-trim="false">
            <span class="error" ng-show="myForm.input.$error.required">
@@ -18480,7 +18480,7 @@ var inputType = {
               $scope.value = new Date(2013, 9, 22);
             }]);
        </script>
-       <form data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
+       <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
           Pick a date in 2013:
           <input type="date" id="exampleInput" name="input" ng-model="value"
               placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
@@ -18568,7 +18568,7 @@ var inputType = {
             $scope.value = new Date(2010, 11, 28, 14, 57);
           }]);
       </script>
-      <form data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
+      <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
         Pick a date between in 2013:
         <input type="datetime-local" id="exampleInput" name="input" ng-model="value"
             placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
@@ -18657,7 +18657,7 @@ var inputType = {
           $scope.value = new Date(1970, 0, 1, 14, 57, 0);
         }]);
      </script>
-     <form data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
+     <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
         Pick a between 8am and 5pm:
         <input type="time" id="exampleInput" name="input" ng-model="value"
             placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required />
@@ -18745,7 +18745,7 @@ var inputType = {
           $scope.value = new Date(2013, 0, 3);
         }]);
       </script>
-      <form data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
+      <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
         Pick a date between in 2013:
         <input id="exampleInput" type="week" name="input" ng-model="value"
             placeholder="YYYY-W##" min="2012-W32" max="2013-W52" required />
@@ -18832,7 +18832,7 @@ var inputType = {
           $scope.value = new Date(2013, 9, 1);
         }]);
      </script>
-     <form data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
+     <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="DateController as dateCtrl">
        Pick a month int 2013:
        <input id="exampleInput" type="month" name="input" ng-model="value"
           placeholder="yyyy-MM" min="2013-01" max="2013-12" required />
@@ -18921,7 +18921,7 @@ var inputType = {
                $scope.value = 12;
              }]);
          </script>
-         <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
            Number: <input type="number" name="input" ng-model="value"
                           min="0" max="99" required>
            <span class="error" ng-show="myForm.input.$error.required">
@@ -18997,7 +18997,7 @@ var inputType = {
                $scope.text = 'http://google.com';
              }]);
          </script>
-         <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
            URL: <input type="url" name="input" ng-model="text" required>
            <span class="error" ng-show="myForm.input.$error.required">
              Required!</span>
@@ -19074,7 +19074,7 @@ var inputType = {
                $scope.text = 'me@example.com';
              }]);
          </script>
-           <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+           <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
              Email: <input type="email" name="input" ng-model="text" required>
              <span class="error" ng-show="myForm.input.$error.required">
                Required!</span>
@@ -19145,7 +19145,7 @@ var inputType = {
                };
              }]);
          </script>
-         <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
            <input type="radio" ng-model="color" value="red">  Red <br/>
            <input type="radio" ng-model="color" ng-value="specialValue"> Green <br/>
            <input type="radio" ng-model="color" value="blue"> Blue <br/>
@@ -19193,7 +19193,7 @@ var inputType = {
                $scope.value2 = 'YES'
              }]);
          </script>
-         <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
            Value1: <input type="checkbox" ng-model="value1"> <br/>
            Value2: <input type="checkbox" ng-model="value2"
                           ng-true-value="'YES'" ng-false-value="'NO'"> <br/>
@@ -19721,7 +19721,7 @@ function checkboxInputType(scope, element, attr, ctrl, $sniffer, $browser, $filt
             }]);
        </script>
        <div ng-controller="ExampleController">
-         <form data-netlify="true" name="myForm">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="myForm">
            User name: <input type="text" name="userName" ng-model="user.name" required>
            <span class="error" ng-show="myForm.userName.$error.required">
              Required!</span><br>
@@ -19979,7 +19979,7 @@ var VALID_CLASS = 'ng-valid',
         }]);
     </file>
     <file name="index.html">
-      <form data-netlify="true" name="myForm">
+      <form data-netlify-recaptcha="true" data-netlify="true" name="myForm">
        <div contenteditable
             name="myWidget" ng-model="userContent"
             strip-br="true"
@@ -20242,7 +20242,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
    *        </p>
    *        <p>Now see what happens if you start typing then press the Escape key</p>
    *
-   *       <form data-netlify="true" name="myForm" ng-model-options="{ updateOn: 'blur' }">
+   *       <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-model-options="{ updateOn: 'blur' }">
    *         <p>With $rollbackViewValue()</p>
    *         <input name="myInput1" ng-model="myValue" ng-keydown="resetWithCancel($event)"><br/>
    *         myValue: "{{ myValue }}"
@@ -20669,7 +20669,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
        </style>
        Update input to see transitions when valid/invalid.
        Integer is a valid value.
-       <form data-netlify="true" name="testForm" ng-controller="ExampleController">
+       <form data-netlify-recaptcha="true" data-netlify="true" name="testForm" ng-controller="ExampleController">
          <input ng-model="val" ng-pattern="/^\d+$/" name="anim" class="my-input" />
        </form>
      </file>
@@ -20690,7 +20690,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *
  * You use this behavior by adding `ng-model-options="{ getterSetter: true }"` to an element that
  * has `ng-model` attached to it. You can also add `ng-model-options="{ getterSetter: true }"` to
- * a `<form data-netlify="true">`, which will enable this behavior for all `<input>`s within it. See
+ * a `<form data-netlify-recaptcha="true" data-netlify="true">`, which will enable this behavior for all `<input>`s within it. See
  * {@link ng.directive:ngModelOptions `ngModelOptions`} for more.
  *
  * The following example shows how to use `ngModel` with a getter/setter:
@@ -20699,7 +20699,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  * <example name="ngModel-getter-setter" module="getterSetterExample">
      <file name="index.html">
        <div ng-controller="ExampleController">
-         <form data-netlify="true" name="userForm">
+         <form data-netlify-recaptcha="true" data-netlify="true" name="userForm">
            Name:
            <input type="text" name="userName"
                   ng-model="user.name"
@@ -20975,7 +20975,7 @@ var minlengthDirective = function() {
  *        }]);
  *   </file>
  *   <file name="index.html">
- *    <form data-netlify="true" name="myForm" ng-controller="ExampleController">
+ *    <form data-netlify-recaptcha="true" data-netlify="true" name="myForm" ng-controller="ExampleController">
  *      List: <input name="namesInput" ng-model="names" ng-list required>
  *      <span class="error" ng-show="myForm.namesInput.$error.required">
  *        Required!</span>
@@ -21101,7 +21101,7 @@ var CONSTANT_VALUE_REGEXP = /^(true|false|\d+)$/;
               $scope.my = { favorite: 'unicorns' };
             }]);
        </script>
-        <form data-netlify="true" ng-controller="ExampleController">
+        <form data-netlify-recaptcha="true" data-netlify="true" ng-controller="ExampleController">
           <h2>Which is your favorite?</h2>
             <label ng-repeat="name in names" for="{{name}}">
               {{name}}
@@ -21197,7 +21197,7 @@ var ngValueDirective = function() {
   <example name="ngModelOptions-directive-blur" module="optionsExample">
     <file name="index.html">
       <div ng-controller="ExampleController">
-        <form data-netlify="true" name="userForm">
+        <form data-netlify-recaptcha="true" data-netlify="true" name="userForm">
           Name:
           <input type="text" name="userName"
                  ng-model="user.name"
@@ -21252,7 +21252,7 @@ var ngValueDirective = function() {
   <example name="ngModelOptions-directive-debounce" module="optionsExample">
     <file name="index.html">
       <div ng-controller="ExampleController">
-        <form data-netlify="true" name="userForm">
+        <form data-netlify-recaptcha="true" data-netlify="true" name="userForm">
           Name:
           <input type="text" name="userName"
                  ng-model="user.name"
@@ -21275,7 +21275,7 @@ var ngValueDirective = function() {
   <example name="ngModelOptions-directive-getter-setter" module="getterSetterExample">
     <file name="index.html">
       <div ng-controller="ExampleController">
-        <form data-netlify="true" name="userForm">
+        <form data-netlify-recaptcha="true" data-netlify="true" name="userForm">
           Name:
           <input type="text" name="userName"
                  ng-model="user.name"
@@ -22807,7 +22807,7 @@ forEach(
             };
           }]);
       </script>
-      <form data-netlify="true" ng-submit="submit()" ng-controller="ExampleController">
+      <form data-netlify-recaptcha="true" data-netlify="true" ng-submit="submit()" ng-controller="ExampleController">
         Enter text and hit enter:
         <input type="text" ng-model="text" name="text" />
         <input type="submit" id="submit" value="Submit" />

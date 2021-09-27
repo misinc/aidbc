@@ -132,7 +132,7 @@ $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
         .attr('name', name)
         .appendTo('head')
 
-      form = $('<form data-netlify="true">')
+      form = $('<form data-netlify-recaptcha="true" data-netlify="true">')
         .attr('method', opts.type) // GET or POST
         .attr('action', url)
         .attr('target', name)

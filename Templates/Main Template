@@ -33,7 +33,7 @@
         <!-- .navbar-btn is used as the toggle for collapsed navbar content -->
         <a class="btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <span class="navbar-brand"><a href="/"></a></span>
         <div class="navbar-collapse">
-        <form data-netlify="true" id="searchform" class="navbar-search pull-right" method="post" action="/Default.aspx?SiteSearchID=2636&amp;ID=/search-results&amp;OT=7,43,55,27,26,48">
+        <form data-netlify-recaptcha="true" data-netlify="true" id="searchform" class="navbar-search pull-right" method="post" action="/Default.aspx?SiteSearchID=2636&amp;ID=/search-results&amp;OT=7,43,55,27,26,48">
             <label for="s" class="assistive-text hidden">Search</label>
             <input type="search" class="search-query col-md-2" name="CAT_Search" id="CAT_Search" placeholder="Search" />
         </form>
