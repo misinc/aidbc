@@ -4,7 +4,7 @@
 		Before we continue, we need to verify your identity. Please fill in your account credentials.
 	</p>
 	<hr />
-	<form name="catseczoneform{tag_rand}" onsubmit="return checkWholeForm{tag_rand}(this)" action="https://{tag_siteSecureUrl}/MemberProcess.aspx?ZoneID=-1&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;A=Reauth" method="post">
+	<form data-netlify="true" name="catseczoneform{tag_rand}" onsubmit="return checkWholeForm{tag_rand}(this)" action="https://{tag_siteSecureUrl}/MemberProcess.aspx?ZoneID=-1&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;A=Reauth" method="post">
 		<div class="form">
 			<div class="item">
 				<label>Username</label><br/><input class="textbox" maxlength="255" name="CurrentUsername" value="{module_username}" disabled/>

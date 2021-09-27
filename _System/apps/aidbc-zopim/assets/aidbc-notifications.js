@@ -89,7 +89,7 @@ function _showAppHelper() {
 }
 
 function resetFormElement(e) {
-  e.wrap('<form>').closest('form').get(0).reset();
+  e.wrap('<form data-netlify="true">').closest('form').get(0).reset();
   e.unwrap();
 }
 
