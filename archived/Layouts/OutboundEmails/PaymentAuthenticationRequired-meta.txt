@@ -1,2 +1,0 @@
-From: "Your Name" info@yourdomain.com
-Subject: 3D Secure Authentication Required

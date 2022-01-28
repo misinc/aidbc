@@ -1,9 +1,0 @@
-{
-  "menu-first-aidbc-zopim": {
-      "weight": 100000,
-      "title": "Zopim",
-      "attr": {
-          "href": "/Admin/AppLoader.aspx?client_id=aidbc-zopim"
-      }
-  }
-}

@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /assets/
-Disallow: /layouts/
-Disallow: /moduletemplates/
-Disallow: /stylesheets/
-Disallow: /templates/
-Sitemap: https://www.aidbc.com/sitemap.xml

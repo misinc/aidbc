@@ -1,9 +1,0 @@
-{
-  "menu-first-aidbc-notifications": {
-      "weight": 100000,
-      "title": "BC Notifications",
-      "attr": {
-          "href": "/Admin/AppLoader.aspx?client_id=aidbc-notifications"
-      }
-  }
-}
